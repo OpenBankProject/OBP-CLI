@@ -1,0 +1,1772 @@
+<div class="finder col-sm-5">
+
+ <div id="agence0"></div>
+
+
+ <div id="lesagences">
+			<h2><strong>Trouver</strong> une agence</h2>
+
+<div class="list-agency">
+
+				<ul>
+
+
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['1er mai'],'click');" class="button3">1er mai</a></p>
+						<p>90 Rue Hassiba Ben Bouali - 1er Mai  <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 21">213 21 98 13 21</a>
+    </span><br>
+Fax : <span>+213 21 56 13 15</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Agence DIGITALE Oran'],'click');" class="button3">Agence DIGITALE Oran</a></p>
+						<p>7, Boulevard Larbi Tebessi <br>
+						31200 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-19:00</span><br>Mardi : <span> 09:00-19:00</span><br>Mercredi : <span> 09:00-19:00</span><br>Jeudi : <span> 09:00-19:00</span><br>Dimanche : <span> 09:00-19:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 47">21321 98 13 47</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Agence DIGITALE Sidi Yahia'],'click');" class="button3">Agence DIGITALE Sidi Yahia</a></p>
+						<p>Boulevard Sidi Yahia,  <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-19:00</span><br>Mardi : <span> 09:00-19:00</span><br>Mercredi : <span> 09:00-19:00</span><br>Jeudi : <span> 09:00-19:00</span><br>Dimanche : <span> 09:00-19:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 11 87">21321 98 11 87</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Aïn Benian'],'click');" class="button3">Aïn Benian</a></p>
+						<p>103 rue Omar Idriss Fayçal <br>
+						16260 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 12">213 21 98 13 12</a>
+    </span><br>
+Fax : <span>+213 21 30 67 09</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Ain Romana'],'click');" class="button3">Ain Romana</a></p>
+						<p>41 Zone Industrielle Ben Boulaid Ain Romana <br>
+						9000 Blida </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 07:30-15:00</span><br>Mardi : <span> 07:30-15:00</span><br>Mercredi : <span> 07:30-15:00</span><br>Jeudi : <span> 07:30-15:00</span><br>Dimanche : <span> 07:30-15:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 25 38 13 11">213 25 38 13 11</a>
+    </span><br>
+Fax : <span>+213 25 38 13 14</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Ain Timouchent'],'click');" class="button3">Ain Timouchent</a></p>
+						<p>13, cité 57 logt Abou Bakr Sedik (ex Les Castors) <br>
+						46000 Ain Timouchent </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 41">213 21 98 13 41</a>
+    </span><br>
+Fax : <span>+213 43 60 54 16</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Aïn Turk'],'click');" class="button3">Aïn Turk</a></p>
+						<p>2 Rue Mohamed Boudiaf <br>
+						31000 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 41 44 09 14">213 41 44 09 14</a>
+    </span><br>
+Fax : <span>+213 41 44 09 15</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Akbou'],'click');" class="button3">Akbou</a></p>
+						<p>RN 26 Faubourg de la gare <br>
+						6001 Bejaïa </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 61">213 21 98 11 61</a>
+    </span><br>
+Fax : <span>+213 34 35 96 67</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Alger'],'click');" class="button3">Alger</a></p>
+						<p>Ilot 1, Quartier d'affaires d'Alger <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 53 99">21321 98 53 99</a>
+    </span><br>
+Fax : <span>+21323 92 48 36</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Ali Khoudja'],'click');" class="button3">Ali Khoudja</a></p>
+						<p>135 avenue Ali Khoudja <br>
+						16606 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 29">213 21 98 13 29</a>
+    </span><br>
+Fax : <span>+213 21 92 44 29</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Annaba'],'click');" class="button3">Annaba</a></p>
+						<p>57 boulevard Colonel Amirouche <br>
+						23001 Annaba </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 38 84 15 73">213 38 84 15 73</a>
+    </span><br>
+Fax : <span>+213 38 84 15 81</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Annaba ALN'],'click');" class="button3">Annaba ALN</a></p>
+						<p>40 avenue de l'ALN - Champs de Mars <br>
+						23001 Annaba </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 38 84 00 80">213 38 84 00 80</a>
+    </span><br>
+Fax : <span>+213 38 84 00 75</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Arzew'],'click');" class="button3">Arzew</a></p>
+						<p>3 avenue des jardins <br>
+						31200 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 57">213 21 98 13 57</a>
+    </span><br>
+Fax : <span>+213 41 48 77 18</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Bab Essebt'],'click');" class="button3">Bab Essebt</a></p>
+						<p>2 Boulevard Larbi Tebessi <br>
+						9000 Blida </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 67">213 21 98 11 67</a>
+    </span><br>
+Fax : <span>+213 25 40 86 19</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Bab Ezzouar'],'click');" class="button3">Bab Ezzouar</a></p>
+						<p>Centre Commercial et des Loisirs <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 31">213 21 98 13 31</a>
+    </span><br>
+Fax : <span>+213 23 92 40 68</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Baba Hassen'],'click');" class="button3">Baba Hassen</a></p>
+						<p>Cité Al Oumrane n°3 <br>
+						16303 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 15">213 21 98 13 15</a>
+    </span><br>
+Fax : <span>+213 21 35 59 48</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Beaulieu'],'click');" class="button3">Beaulieu</a></p>
+						<p>99 route de Meftah <br>
+						16310 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 04">213 21 98 13 04</a>
+    </span><br>
+Fax : <span>+213 21 51 46 67</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Béjaia'],'click');" class="button3">Béjaia</a></p>
+						<p>Cité Somacob Immeuble G - 18 rue Boumedaoui Nacer <br>
+						6000 Bejaïa </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 84">213 21 98 13 84</a>
+    </span><br>
+Fax : <span>+213 34 21 60 14</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Béjaïa ALN'],'click');" class="button3">Béjaïa ALN</a></p>
+						<p>5 boulevard de l'ALN - Daouadji <br>
+						6000 Bejaïa </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 59">213 21 98 11 59</a>
+    </span><br>
+Fax : <span>+213 34 21 37 37</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Ben Aknoun'],'click');" class="button3">Ben Aknoun</a></p>
+						<p>Zéphir Center - 11 rue Doudou Mokhtar <br>
+						16306 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 23">213 21 98 13 23</a>
+    </span><br>
+Fax : <span>+213 21 91 60 54</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['biskra'],'click');" class="button3">biskra</a></p>
+						<p>24, boulevard El Amir Abdelkader  <br>
+						07000 Biskra </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 51">213 21 98 11 51</a>
+    </span><br>
+Fax : <span>+213 33 73 56 61</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Blida'],'click');" class="button3">Blida</a></p>
+						<p>Complexe multifonctionnel Sim boulevard Mohamed Boudiaf <br>
+						9000 Blida </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 65">213 21 98 11 65</a>
+    </span><br>
+Fax : <span>+213 25 31 19 64</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Bordj Bou Arreridj'],'click');" class="button3">Bordj Bou Arreridj</a></p>
+						<p>31 boulevard Houari Boumediene, <br>
+						34000 Bordj Bou Arreridj </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 35 68 33 66">213 35 68 33 66</a>
+    </span><br>
+Fax : <span>+213 35 68 33 11</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Bordj El Kiffan'],'click');" class="button3">Bordj El Kiffan</a></p>
+						<p>3 rue Saidi Ahmed <br>
+						16120 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 33">213 21 98 13 33</a>
+    </span><br>
+Fax : <span>+213 21 21 60 25</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Boufarik'],'click');" class="button3">Boufarik</a></p>
+						<p>54 boulevard Mokhtari <br>
+						9400 Blida </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 02">213 21 98 13 02</a>
+    </span><br>
+Fax : <span>+213 25 47 36 17</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Bouira'],'click');" class="button3">Bouira</a></p>
+						<p>72 Boulevard Zighout Youcef,  <br>
+						10000 Bouira </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 06">21321 98 13 06</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Boumerdes'],'click');" class="button3">Boumerdes</a></p>
+						<p>Résidence Badi RN 24 <br>
+						35000 Boumerdes </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 79">213 21 98 11 79</a>
+    </span><br>
+Fax : <span>+213 24 81 63 51</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Boumerdes Résidence Zidane'],'click');" class="button3">Boumerdes Résidence Zidane</a></p>
+						<p>Cité Ain Abdellah <br>
+						35000 Boumerdes </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 81">213 21 98 11 81</a>
+    </span><br>
+Fax : <span>+213 24 81 18 10</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Chéraga'],'click');" class="button3">Chéraga</a></p>
+						<p>Lot N°1 Amara 2 route de Ouled Fayet <br>
+						16086 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 61">213 21 98 13 61</a>
+    </span><br>
+Fax : <span>+213 21 37 08 87</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Chlef'],'click');" class="button3">Chlef</a></p>
+						<p>26 rue de la Résistance <br>
+						2000 Chlef </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 71">213 21 98 11 71</a>
+    </span><br>
+Fax : <span>+213 27 77 93 66</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Cirta'],'click');" class="button3">Cirta</a></p>
+						<p>rue de Cirta <br>
+						16035 Hydra </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 48 04 40">213 21 48 04 40</a>
+    </span><br>
+Fax : <span>+213 21 60 39 29</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Centre d'affaires</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Constantine AADL'],'click');" class="button3">Constantine AADL</a></p>
+						<p>Bd de l'ALN Bât TH03 local C012 nouvelle ville Ali Mendjeli-El Kheroub <br>
+						25000 Constantine </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 53">213 21 98 11 53</a>
+    </span><br>
+Fax : <span>+213 31 93 10 47</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Constantine Belle Vue'],'click');" class="button3">Constantine Belle Vue</a></p>
+						<p>28 rue Zadi Abdelhamid - Belle Vue <br>
+						25000 Constantine </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 92">213 21 98 13 92</a>
+    </span><br>
+Fax : <span>+213 31 93 10 47</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Constantine Cirta'],'click');" class="button3">Constantine Cirta</a></p>
+						<p>10 rue Aouati Mustapha <br>
+						25000 Constantine </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 31 93 13 16">213 31 93 13 16</a>
+    </span><br>
+Fax : <span>+213 31 93 15 29</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Dar El Beida'],'click');" class="button3">Dar El Beida</a></p>
+						<p>Cité Aissat Idir <br>
+						16033 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 39">213 21 98 13 39</a>
+    </span><br>
+Fax : <span>+213 21 50 59 64</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Dely Ibrahim Bois des Cars'],'click');" class="button3">Dely Ibrahim Bois des Cars</a></p>
+						<p>10 Lots Bois des Cars II <br>
+						16320 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 89">213 21 98 11 89</a>
+    </span><br>
+Fax : <span>+213 21 91 80 22</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Dely Ibrahim Cité Olympique'],'click');" class="button3">Dely Ibrahim Cité Olympique</a></p>
+						<p>Cité Olympique <br>
+						16320 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 91">213 21 98 11 91</a>
+    </span><br>
+Fax : <span>+213 21 37 40 88</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Didouche Mourad'],'click');" class="button3">Didouche Mourad</a></p>
+						<p>9A rue Didouche Mourad <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 93">213 21 98 11 93</a>
+    </span><br>
+Fax : <span>+213 21 64 24 95</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Draria'],'click');" class="button3">Draria</a></p>
+						<p>1 chemin des Crêtes <br>
+						16003 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 97">213 21 98 11 97</a>
+    </span><br>
+Fax : <span>+213 21 35 58 95</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['El Achour'],'click');" class="button3">El Achour</a></p>
+						<p>53 lot d'El Achour <br>
+						16403 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 95">213 21 98 11 95</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['El Mouradia'],'click');" class="button3">El Mouradia</a></p>
+						<p>10 rue des Frères Oughilis <br>
+						16070 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 69 00 04">213 21 69 00 04</a>
+    </span><br>
+Fax : <span>+213 21 69 00 24</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Hassi Messaoud'],'click');" class="button3">Hassi Messaoud</a></p>
+						<p>Cité 1850 logements,  <br>
+						30500 Hassi Messaoud </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 63">213 21 98 11 63</a>
+    </span><br>
+Fax : <span>+213 29 75 42 28</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Hydra Djamila'],'click');" class="button3">Hydra Djamila</a></p>
+						<p>8 Rue de Cirta <br>
+						16035 Hydra </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 48 28 56">213 21 48 28 56</a>
+    </span><br>
+Fax : <span>+213 21 69 40 77</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Jijel'],'click');" class="button3">Jijel</a></p>
+						<p>26, Rue du 20 Août 1955,  <br>
+						18000 Jijel </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 11 83">21321 98 11 83</a>
+    </span><br>
+Fax : <span>+213 34 49 79 90</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Koléa'],'click');" class="button3">Koléa</a></p>
+						<p>Route de Fouka - Bât A9 bis <br>
+						42400 Tipaza </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 77">213 21 98 11 77</a>
+    </span><br>
+Fax : <span>+213 24 47 97 95</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Kouba'],'click');" class="button3">Kouba</a></p>
+						<p>Local Nouvion La Croix <br>
+						16050 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 25">213 21 98 13 25</a>
+    </span><br>
+Fax : <span>+213 21 28 60 57</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['La Vigerie'],'click');" class="button3">La Vigerie</a></p>
+						<p>48 boulevard Colonel Bougara - Belle Vue <br>
+						16200 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 17">213 21 98 13 17</a>
+    </span><br>
+Fax : <span>+213 7 70 27 90 45</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Les Sources'],'click');" class="button3">Les Sources</a></p>
+						<p>Lotissement n°3 - Villa n°3 <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 35">213 21 98 13 35</a>
+    </span><br>
+Fax : <span>+213 21 56 55 41</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Mascara'],'click');" class="button3">Mascara</a></p>
+						<p>Rue Bougara Tahar Bel-Air <br>
+						29000 Mascara </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 45">213 21 98 11 45</a>
+    </span><br>
+Fax : <span>+213 45 81 57 59</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Médéa'],'click');" class="button3">Médéa</a></p>
+						<p>12 boulevard de l'ALN <br>
+						26000 Médéa </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 73">213 21 98 11 73</a>
+    </span><br>
+Fax : <span>+213 25 59 11 58</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Mostaganem'],'click');" class="button3">Mostaganem</a></p>
+						<p>Cour de la Culture - Route d'Oran <br>
+						27000 Mostaganem </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 41">213 21 98 11 41</a>
+    </span><br>
+Fax : <span>+213 45 21 39 83</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['MSILA'],'click');" class="button3">MSILA</a></p>
+						<p>Cité Administrative M'Sila <br>
+						28000 MSILA </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 27">21321 98 13 27</a>
+    </span><br>
+Fax : <span>+213 35 54 50 06</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Guichet de Change</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran Bir El Djir'],'click');" class="button3">Oran Bir El Djir</a></p>
+						<p>84 Lotissement, 110 Hai Emir  <br>
+						31001 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21341 33 26 19">21341 33 26 19</a>
+    </span><br>
+Fax : <span>+21341 33 26 95</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran Chakib Arslan'],'click');" class="button3">Oran Chakib Arslan</a></p>
+						<p>34, avenue Chakib Arslane <br>
+						31001 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 53">213 21 98 13 53</a>
+    </span><br>
+Fax : <span>+213 41 34 71 88</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran Millenium'],'click');" class="button3">Oran Millenium</a></p>
+						<p>A1 Tranche 01 Boulevard du Millenium <br>
+						31000 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 55">213 21 98 13 55</a>
+    </span><br>
+Fax : <span>+213 41 43 92 87</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran Route de Canastel'],'click');" class="button3">Oran Route de Canastel</a></p>
+						<p>Route Canastel ILOT 13  <br>
+						31001 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 59">21321 98 13 59</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran St Hubert'],'click');" class="button3">Oran St Hubert</a></p>
+						<p>4 boulevard de l'ANP,  <br>
+						31001 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 51">213 21 98 13 51</a>
+    </span><br>
+Fax : <span>+213 41 34 10 08</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Oran Usto'],'click');" class="button3">Oran Usto</a></p>
+						<p>11 Coopérative Zighout Youcef, <br>
+						31001 Oran </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 49">213 21 98 13 49</a>
+    </span><br>
+Fax : <span>+213 41 53 86 21</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Rostomia (Ex Bouzareah)'],'click');" class="button3">Rostomia (Ex Bouzareah)</a></p>
+						<p>N°11 rue 1er Novembre,  <br>
+						16340 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 11 49">21321 98 11 49</a>
+    </span><br>
+Fax : <span>+21321 93 69 81</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Rouiba'],'click');" class="button3">Rouiba</a></p>
+						<p>Cité Cadat N° 90 <br>
+						16012 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 76">213 21 98 13 76</a>
+    </span><br>
+Fax : <span>+213 21 81 27 57</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Sétif'],'click');" class="button3">Sétif</a></p>
+						<p>Coopérative 1er novembre 1954 n°8 <br>
+						19000 Sétif </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 96">213 21 98 13 96</a>
+    </span><br>
+Fax : <span>+213 36 92 42 76</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Sétif – 1er Novembre 1954'],'click');" class="button3">Sétif – 1er Novembre 1954</a></p>
+						<p>3 avenue du 1er Novembre 1954 <br>
+						19000 Sétif </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 36 83 28 02">213 36 83 28 02</a>
+    </span><br>
+Fax : <span>+213 36 83 29 43</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Sétif Park Mall'],'click');" class="button3">Sétif Park Mall</a></p>
+						<p>Rue du 08 novembre,  <br>
+						19000 Sétif </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 08">21321 98 13 08</a>
+    </span><br>
+Fax : <span>+21336 81 40 63</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Sidi Bel Abbes'],'click');" class="button3">Sidi Bel Abbes</a></p>
+						<p>2 boulevard Larbi Tbessi <br>
+						22005 Sidi Bel Abbes </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 43">213 21 98 11 43</a>
+    </span><br>
+Fax : <span>+213 48 65 28 76</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Sidi Yahia'],'click');" class="button3">Sidi Yahia</a></p>
+						<p>4 Chemin Sidi Yahia <br>
+						16300 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 85">213 21 98 11 85</a>
+    </span><br>
+Fax : <span>+213 21 60 29 30</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Siège Social'],'click');" class="button3">Siège Social</a></p>
+						<p>Ilot 1, Quartier d'affaires d'Alger <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 91 11 30/31">21321 91 11 30/31</a>
+    </span><br>
+Fax : <span>+213</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Skikda'],'click');" class="button3">Skikda</a></p>
+						<p>10 Cité Amar Chetaibi <br>
+						21000 Skikda </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 55">213 21 98 11 55</a>
+    </span><br>
+Fax : <span>+213 38 72 24 83</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Staoueli'],'click');" class="button3">Staoueli</a></p>
+						<p>64 rue Kaiti Ahmed <br>
+						16062 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 37">213 21 98 13 37</a>
+    </span><br>
+Fax : <span>+213 21 39 31 51</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Telemly'],'click');" class="button3">Telemly</a></p>
+						<p>82 boulevard Krim Belkacem <br>
+						16000 Alger </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 19">213 21 98 13 19</a>
+    </span><br>
+Fax : <span>+213 21 63 29 09</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Tiaret'],'click');" class="button3">Tiaret</a></p>
+						<p>Cité du 1er Novembre <br>
+						14000 Tiaret </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+21321 98 13 10">21321 98 13 10</a>
+    </span><br>
+Fax : <span>+21346 20 55 63</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Guichet de Change</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Tipaza'],'click');" class="button3">Tipaza</a></p>
+						<p>Route Nationale - Artère principale <br>
+						42000 Tipaza </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 75">213 21 98 11 75</a>
+    </span><br>
+Fax : <span>+213 24 47 97 95</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Tizi Ouzou'],'click');" class="button3">Tizi Ouzou</a></p>
+						<p>Rue Stiti Ali <br>
+						15000 Tizi Ouzou </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 13 88">213 21 98 13 88</a>
+    </span><br>
+Fax : <span>+213 26 21 95 49</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+                <li class="agency-orange" id="agence-0">
+						<p class="agency-title"><a href="javascript:google.maps.event.trigger(gmarkers['Tlemcen'],'click');" class="button3">Tlemcen</a></p>
+						<p>3 boulevard Abderrahmane Derrar <br>
+						13000 Tlemcen </p>
+            <!--        <a class="" data-toggle="collapse" href="#collapse0" aria-expanded="false" aria-controls="collapseExample">
++
+</a>-->
+<div class="agency-collapse" id="collapse0">
+       <strong>Horaires d'ouverture :</strong>
+    <br>Lundi : <span> 09:00-16:00</span><br>Mardi : <span> 09:00-16:00</span><br>Mercredi : <span> 09:00-16:00</span><br>Jeudi : <span> 09:00-16:00</span><br>Dimanche : <span> 09:00-16:00
+    <br><br>
+    Téléphone : <span><a href="tel:+213 21 98 11 47">213 21 98 11 47</a>
+    </span><br>
+Fax : <span>+213 43 38 31 12</span><br>
+
+<span><i class="glyphicon glyphicon-ok"></i> Distributeurs Automatique de Billets (DAB ATM)</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Particuliers </span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Professionnels</span><br><span><i class="glyphicon glyphicon-ok"></i> Clientèle Entreprises</span><br><span><i class="glyphicon glyphicon-ok"></i> Statut Agence </span><br><span><i class="glyphicon glyphicon-ok"></i> Espace libre service</span><br>
+
+
+</span></div>
+
+					</li>
+
+
+            
+
+
+				</ul>
+			</div>
+		</div>
+
+            </div>
