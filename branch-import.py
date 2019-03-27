@@ -47,13 +47,13 @@ for branch in sheetdata['algeriev2_branch_data_critinfo_'][1:-1]:
          }
       },
       'lobby': {
-        'monday': [{'opening_time': '', 'closing_time': ''}],
-        'tuesday': [{'opening_time': '', 'closing_time': ''}],
-        'wednesday': [{'opening_time': '', 'closing_time': ''}],
-        'thursday': [{'opening_time': '', 'closing_time': ''}],
+        'monday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+        'tuesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+        'wednesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+        'thursday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
         'friday': [{'opening_time': '', 'closing_time': ''}],
-        'saturday': [{'opening_time': '', 'closing_time': ''}],
-        'sunday': [{'opening_time': '', 'closing_time': ''}],
+        'saturday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+        'sunday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
       },
       'drive_up': {
         'monday': {'opening_time': '', 'closing_time': ''},
@@ -83,18 +83,3 @@ for payload in branches:
     headers = {'Authorization':'DirectLogin token="<>'}
     response = requests.post('https://bnpparibas-irb.openbankproject.com/obp/v3.0.0/banks/bnpp-irb.01.dz.dz/branches', json=data, headers=headers)
     print(response.text)
-
-'''
-## Delete all branches
-
-branch_ids = []
-for branch in branches:
-  branch_ids.append(branch['id'])
-
-for branch_id in branch_ids:
-    placeholder = 'https://bnpparibas-irb.openbankproject.com/obp/v3.1.0/banks/bnpp-irb.01.dz.dz/branches/{}'
-    url = placeholder.format(branch_id.encode('utf-8'))
-    headers = {'Authorization':'DirectLogin token="<>"'}
-    response = requests.delete(url, json=data, headers=headers)
-    print response.text
-''' 
