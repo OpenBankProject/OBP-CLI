@@ -5,8 +5,7 @@ Python Utilities to make working with Open Bank Project api easier
 ## Install
 
 ```
-pip install -i https://test.pypi.org/simple/ obp-python==0.0.5 --extra-index-url https://pypi.org/simple/
-# --extra-index-url is needed as click dependency is taken from official pypi index
+pip install obp-python # Requires at least python 3
 ```
 
 ## Run a utility
