@@ -5,7 +5,7 @@ AUTH_TOKEN = os.getenv('AUTH_TOKEN', False)
 OBP_ENDPOINT = os.getenv('OBP_ENDPOINT', False)
 USER_ID = os.getenv('USER_ID', False)
 
-def addRole(roleName=None):
+def addRole(role=None):
 
 
   url = OBP_ENDPOINT + '/obp/v3.1.0/users/{}/'.format(USER_ID) + 'entitlements'
@@ -21,5 +21,5 @@ def addRole(roleName=None):
 
 if __name__ == '__main__':
   role = input("Role wanted -->")
-  addRole(roleName=role)
+  addRole(role=role)
 
