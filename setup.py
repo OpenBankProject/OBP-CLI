@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="obp_python",
-    version="0.0.3",
+    version="0.0.4",
     author="",
     author_email="",
     description="Beta Open Bank Project Python Utilities",
@@ -18,5 +18,9 @@ setuptools.setup(
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
-    install_requires=['requests'],
+    install_requires=['click', 'requests'],
+    entry_points='''
+      [console_scripts]
+      obp=obp_python:cli
+    ''',
 )

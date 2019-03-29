@@ -7,6 +7,12 @@ PASSWORD = os.getenv('PASSWORD', False)
 OBP_ENDPOINT = os.getenv('OBP_ENDPOINT', False)
 
 def getAuthToken(OBP_USERNAME=OBP_USERNAME, CONSUMER_KEY=CONSUMER_KEY, PASSWORD=PASSWORD, OBP_ENDPOINT=OBP_ENDPOINT):
+
+  if CONSUMER_KEY is False:
+    CONSUMER_KEY = input("CONSUMER_KEY --> ")
+    OBP_USERNAME = input("OBP_USERNAME --> ")
+    PASSWORD = input("PASSWORD --> ")
+    OBP_ENDPOINT = input("OBP_ENDPOINT (include http:// or https://) --> ")
   authorization = 'DirectLogin username="{}", password="{}", consumer_key="{}"'.format(OBP_USERNAME, PASSWORD, CONSUMER_KEY)
 
   headers={ 

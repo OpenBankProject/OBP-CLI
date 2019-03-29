@@ -2,20 +2,21 @@ Python Utilities to make working with Open Bank Project api easier
 
 - uses python3
 
-## Setup
+## Install
 
 ```
-git clone <this-repo>
-virtualenv -p python3 venv
-. venv/bin/activate
-pip install -r requirements.txt
+pip install -i https://test.pypi.org/simple/obp-python
 ```
 
 ## Run a utility
 
 e.g.
 ```
-python auth_direct_login.py
+obp getauth
 ```
+
+## Utilities
+
+- getauth : Get a direct login token
 
 
