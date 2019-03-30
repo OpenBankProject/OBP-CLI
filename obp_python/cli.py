@@ -7,4 +7,5 @@ def cli():
 
 @cli.command()
 def getauth():
-  getAuthToken()
+  authToken = getAuthToken()
+  print(authToken)
