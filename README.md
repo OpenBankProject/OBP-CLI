@@ -39,4 +39,7 @@ pip install -e <path-to-this-repo> # -e means Install  a  project  in editable m
 # Work on utility..submit pull request 
 
 ```
+###### Update history
 
+- 0.0.9
+Switch to use `OBP_API_HOST` instead of `OBP_ENDPOINT`
