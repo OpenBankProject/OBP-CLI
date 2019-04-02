@@ -1,29 +1,47 @@
 import requests
 from dms_convert import dms2dec
 from pyexcel_ods import get_data
+from random import randint
+import sys, traceback
+import re
 
 ## Example 
 '''
-Loading location data from ods spreadsheet, see sample
+Loading location data from ods spreadsheet
 '''
 
+AUTH_TOKEN = os.getenv('AUTH_TOKEN', False)
+OBP_IMPORT_SHEET_NAME = os.getenv("OBP_IMPORT_SHEET_NAME", False)
+OBP_BANK_ID = os.getenv("OBP_BANK_ID", False)
+
+def get_value(index=None, obj=None):
+    try:
+      return obj[index]
+    except IndexError:
+      return ''
 
 ## Read from sheet
-
 sheetdata = get_data('geoloc-branches.ods')
 branches = []
-for branch in sheetdata['algeriev2_branch_data_critinfo_'][1:-1]:
+for index, branch in enumerate(sheetdata[OBP_IMPORT_SHEET_NAME][1:]):
   try:
-    branch_id = str(branch[3])
-    name = branch[8]
-    addr1 = branch[4]
-    city = branch[7]
-    postcode = str(branch[6])
+    if branch == []:
+      continue; # Skip blank lines
+    branch_id = get_value(3, branch)
+    name = get_value(8, branch)
+    addr1 = get_value(4, branch)
+    city = get_value(7, branch)
+    label = get_value(8, branch)
+    postcode = get_value(6, branch)
     latitude = dms2dec(branch[0])
     longitude = dms2dec(branch[1])
+    if branch_id is '':
+      branch_id = str(randint(100,1000)) + city + label
+      branch_id = ascii(re.sub(r'\W+', '', branch_id)).replace('\\','')
+      print("Try getting id: {}".format(branch_id))
 
     branch = {
-      'id': branch_id,
+      'id': str(branch_id),
       'bank_id' : 'bnpp-irb.01.dz.dz',
       'name': name,
       'address': {
@@ -33,7 +51,7 @@ for branch in sheetdata['algeriev2_branch_data_critinfo_'][1:-1]:
           'city': city,
           'state': '',
           'county': '',
-          'postcode': postcode,
+          'postcode': str(postcode),
           'country_code': 'DZ'
       },
       'location' : {
@@ -71,15 +89,30 @@ for branch in sheetdata['algeriev2_branch_data_critinfo_'][1:-1]:
       'accessibleFeatures': '',
       'branch_type': '',
       'more_info' : '',
-      'phone_number': ''
+      'phone_number': branch[10]
     }
     branches.append(branch)
-  except Exception:
+  except Exception as e:
+    traceback.print_exc(file=sys.stdout) 
     pass
 
 #Post to api endpoint
+sucessCount = 0
+failCount = 0
 for payload in branches:
-    data = payload 
-    headers = {'Authorization':'DirectLogin token="<>'}
-    response = requests.post('https://bnpparibas-irb.openbankproject.com/obp/v3.0.0/banks/bnpp-irb.01.dz.dz/branches', json=data, headers=headers)
+    headers = {'Authorization':'DirectLogin token=""'}
+    authorization = 'DirectLogin token="{}"'.format(AUTH_TOKEN)
+    headers = {'Content-Type': 'application/json',
+               'Authorization': authorization}
+    url = OBP_API_HOST + '/obp/v3.1.0/banks/{}/branches'.format(OBP_BANK_ID)
+    response = requests.post(url, json=data, headers=headers)
+
     print(response.text)
+    if response.status_code is not 201:
+      failCount = failCount + 1
+    elif response.status_code == 201:
+      sucessCount = sucessCount + 1
+
+
+print("Success: {}".format(sucessCount))
+print("Failed: {}".format(failCount))
