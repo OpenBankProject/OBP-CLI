@@ -3,12 +3,12 @@ import os
 import json
 
 OBP_AUTH_TOKEN = os.getenv('AUTH_TOKEN', False)
-OBP_ENDPOINT = os.getenv('OBP_ENDPOINT', False)
+OBP_API_HOST = os.getenv('OBP_API_HOST', False)
 
-def getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_ENDPOINT=OBP_ENDPOINT):
+def getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_API_HOST=OBP_API_HOST):
 
 
-  url = OBP_ENDPOINT + '/obp/v3.1.0/users/current'
+  url = OBP_API_HOST + '/obp/v3.1.0/users/current'
 
   authorization = 'DirectLogin token="{}"'.format(OBP_AUTH_TOKEN)
   headers = {'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ def getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_ENDPOINT=OBP_ENDPOINT):
 
 if __name__ == '__main__':
   OBP_AUTH_TOKEN = input("OBP_AUTH_TOKEN -->")
-  OBP_ENDPOINT = input("OBP_ENDPOINT -->")
+  OBP_API_HOST = input("OBP_API_HOST -->")
   print("Your user id is:")
-  print(getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_ENDPOINT=OBP_ENDPOINT))
+  print(getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_API_HOST=OBP_API_HOST))
 
