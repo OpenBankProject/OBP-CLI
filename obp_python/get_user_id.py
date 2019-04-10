@@ -2,7 +2,7 @@ import requests
 import os
 import json
 
-OBP_AUTH_TOKEN = os.getenv('AUTH_TOKEN', False)
+OBP_AUTH_TOKEN = os.getenv('OBP_AUTH_TOKEN', False)
 OBP_API_HOST = os.getenv('OBP_API_HOST', False)
 
 def getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_API_HOST=OBP_API_HOST):
@@ -24,7 +24,7 @@ def getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_API_HOST=OBP_API_HOST):
   return json.loads(req.text)
 
 if __name__ == '__main__':
-  OBP_AUTH_TOKEN = input("OBP_AUTH_TOKEN -->")
+  OBP_AUTH_TOKEN = os.getenv('OBP_AUTH_TOKEN', input("OBP_AUTH_TOKEN -->"))
   OBP_API_HOST = input("OBP_API_HOST -->")
   print("Your user id is:")
   print(getUserId(OBP_AUTH_TOKEN=OBP_AUTH_TOKEN, OBP_API_HOST=OBP_API_HOST))
