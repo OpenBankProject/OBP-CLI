@@ -19,7 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3",
-    install_requires=['click', 'requests'],
+    install_requires=['click', 'requests', 'appdirs'],
     entry_points='''
       [console_scripts]
       obp=obp_python:cli
