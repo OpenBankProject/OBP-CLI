@@ -25,10 +25,7 @@ def getAuthToken(OBP_USERNAME=None, OBP_CONSUMER_KEY=None, OBP_PASSWORD=None, OB
 
   req = requests.post(OBP_API_HOST, headers=headers)
 
-  if req.status_code == 201 or req.status_code == 200:
-    return json.loads(req.text)['token']
-  else:
-    return json.loads(req.text)
+  return json.loads(req.text)
 
 
 if __name__ == '__main__':
