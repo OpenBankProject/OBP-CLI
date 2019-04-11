@@ -14,17 +14,20 @@ def cli():
 def init():
   init_config_dir()
   OBP_API_HOST = click.prompt("Please enter your API_HOST: ", 
-                              default="http://127.0.0.1:8080")
+                              default=get_config("OBP_API_HOST",
+                              default="http://127.0.0.1:8080",
+                              allow_stdin=False))
   set_obp_api_host(OBP_API_HOST)
   OBP_USERNAME = click.prompt("Please enter your username: ",
-                              default=get_config("OBP_USERNAME"))
+                              default=get_config("OBP_USERNAME",
+                              allow_stdin=False))
   set_obp_username(OBP_USERNAME)
   OBP_PASSWORD = click.prompt("Please enter your password: ", hide_input=True,
                               confirmation_prompt=True)
   set_obp_password(OBP_PASSWORD)
   
   click.echo("... generating direct login token")
-  if get_config("OBP_CONSUMER_KEY") is False:
+  if get_config("OBP_CONSUMER_KEY", allow_stdin=False) is False:
     click.echo("Consumer key needed to generate a DirectLogin token")
     click.confirm("Do you have a consumer key?")
     if click.confirm("Would you like to generate one?", abort=True):
@@ -33,7 +36,8 @@ def init():
            " which you can use here.".format(OBP_API_HOST))
   else:
     OBP_CONSUMER_KEY = click.prompt("Please enter your OBP_CONSUMER_KEY: ",
-                                    default=get_config("OBP_CONSUMER_KEY"))
+                                    default=get_config("OBP_CONSUMER_KEY",
+                                    allow_stdin=False))
     set_obp_consumer_key(OBP_CONSUMER_KEY)
     
   req = getAuthToken()
