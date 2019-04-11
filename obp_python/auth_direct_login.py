@@ -25,7 +25,7 @@ def getAuthToken(OBP_USERNAME=None, OBP_CONSUMER_KEY=None, OBP_PASSWORD=None, OB
 
   req = requests.post(OBP_API_HOST, headers=headers)
 
-  return json.loads(req.text)
+  return req
 
 
 if __name__ == '__main__':
