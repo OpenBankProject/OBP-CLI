@@ -1,4 +1,4 @@
 from .cli import cli
-from .add_role import addRole
+from .addRole import addRole
 from .auth_direct_login import getAuthToken
 from .getUserId import getUserId

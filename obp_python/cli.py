@@ -3,8 +3,10 @@ import json
 from .auth_direct_login import getAuthToken
 from .init import (init_config_dir, set_obp_api_host, set_obp_username, 
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
-                  get_config)
+                  set_obp_user_id, get_config)
 from .sandboxImport import sandboxImport
+from .getUserId import getUserId
+from .addRole import addRole
 from .getUserId import getUserId
 
 @click.group()
@@ -21,7 +23,7 @@ def sandboximport(input):
     exit(req.text)
 
 
-@cli.command()
+@cli.command(help="Initalize connection to your Open Bank Project instance")
 def init():
   init_config_dir()
   OBP_API_HOST = click.prompt("Please enter your API_HOST: ", 
@@ -55,12 +57,19 @@ def init():
   if req.status_code == 201 or req.status_code == 200:
     authToken = json.loads(req.text)['token']
     set_obp_auth_token(authToken)
+    # Get & set user id
+    req = getUserId()
+    if req.status_code == 201 or req.status_code == 200:
+      set_obp_user_id(json.loads(req.text)['user_id']) 
+    else:
+      click.echo("Unable to get your user_id")
+      exit(req.text)
   else:
     exit(req.text)
 
   click.echo("Init complete")
 
-@cli.command()
+@cli.command(help="Get your DirectLogin token")
 def getauth():
   authToken = getAuthToken()
   print(json.loads(authToken.text))
@@ -79,5 +88,14 @@ def getuserid():
   if req.status_code == 201 or req.status_code == 200:
     user_id = json.loads(req.text)['user_id']
     click.echo({'user_id': user_id})
+  else:
+    exit(req.text)
+
+@cli.command(help="Add a role for current user")
+@click.option('--role-name', required=True)
+def addrole(role_name):
+  req = addRole(role=role_name, require_bank_id=False)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
   else:
     exit(req.text)
