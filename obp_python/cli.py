@@ -1,5 +1,6 @@
 import click
 import json
+import os
 from .auth_direct_login import getAuthToken
 from .init import (init_config_dir, set_obp_api_host, set_obp_username, 
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
@@ -14,9 +15,17 @@ def cli():
   pass
 
 @cli.command(help="Bulk import sandbox data from json input")
-@click.argument('input', type=click.File('rb'))
-def sandboximport(input):
+@click.option('--input', type=click.File('rb'), required=False)
+@click.option('--example', required=False, is_flag=True)
+def sandboximport(input=None, example=False):
+  if input is None and example is False:
+    click.echo("Invalid option. See obp sandboximport --help", err=True)
+    exit(-1)
+  if example: #load example import 
+    input = open(os.path.join(os.path.dirname(__file__), 'example_import.json'))
   req = sandboxImport(src=input)
+  if example:
+    input.close()
   if req.status_code == 201 or req.status_code == 200:
     click.echo("Sandbox import complete")
   else:
