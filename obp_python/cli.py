@@ -4,10 +4,20 @@ from .auth_direct_login import getAuthToken
 from .init import (init_config_dir, set_obp_api_host, set_obp_username, 
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
                   get_config)
+from .sandboxImport import sandboxImport
 
 @click.group()
 def cli():
   pass
+
+@cli.command(help="Bulk import sandbox data from json input")
+@click.argument('input', type=click.File('rb'))
+def sandboximport(input):
+  req = sandboxImport(src=input)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo("Sandbox import complete")
+  else:
+    exit(req.text)
 
 
 @cli.command()
