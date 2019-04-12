@@ -5,6 +5,7 @@ from .init import (init_config_dir, set_obp_api_host, set_obp_username,
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
                   get_config)
 from .sandboxImport import sandboxImport
+from .getUserId import getUserId
 
 @click.group()
 def cli():
@@ -63,3 +64,20 @@ def init():
 def getauth():
   authToken = getAuthToken()
   print(json.loads(authToken.text))
+
+@cli.command(help="Get your user info")
+def getuser():
+  req = getUserId()
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Get your user id")
+def getuserid():
+  req = getUserId()
+  if req.status_code == 201 or req.status_code == 200:
+    user_id = json.loads(req.text)['user_id']
+    click.echo({'user_id': user_id})
+  else:
+    exit(req.text)
