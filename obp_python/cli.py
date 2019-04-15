@@ -15,8 +15,9 @@ def cli():
   pass
 
 @cli.command(help="Bulk import sandbox data from json input")
-@click.option('--input', type=click.File('rb'), required=False)
-@click.option('--example', required=False, is_flag=True)
+@click.option('--input', type=click.File('rb'), required=False, help="Import from file")
+@click.option('--example', required=False, is_flag=True, 
+              help="Auto import very small example dataset")
 def sandboximport(input=None, example=False):
   if input is None and example is False:
     click.echo("Invalid option. See obp sandboximport --help", err=True)
