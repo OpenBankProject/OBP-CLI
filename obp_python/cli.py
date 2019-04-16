@@ -23,7 +23,7 @@ def sandboximport(input=None, example=False):
     click.echo("Invalid option. See obp sandboximport --help", err=True)
     exit(-1)
   if example: #load example import 
-    input = open(os.path.join(os.path.dirname(__file__), 'example_import.json'))
+    input = open(os.path.join(os.path.dirname(__file__), '../example_import.json'))
   req = sandboxImport(src=input)
   if example:
     input.close()
