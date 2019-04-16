@@ -1,0 +1,4 @@
+include *.txt
+include example_import.json
+recursive-include examples *.txt *.py
+prune examples/sample?/build
