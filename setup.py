@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="obp_python",
-    version="0.17",
+    version="0.19",
     author="",
     author_email="",
     description="Beta Open Bank Project Python Utilities",
@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/chrisjsimpson/open-bank-project-python",
     packages=setuptools.find_packages(),
+    data_files=[('obp_python/sandbox', ['example_import.json'])],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -1,6 +1,7 @@
 import click
 import json
 import os
+import sys
 from .auth_direct_login import getAuthToken
 from .init import (init_config_dir, set_obp_api_host, set_obp_username, 
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
@@ -23,7 +24,7 @@ def sandboximport(input=None, example=False):
     click.echo("Invalid option. See obp sandboximport --help", err=True)
     exit(-1)
   if example: #load example import 
-    input = open(os.path.join(os.path.dirname(__file__), 'example_import.json'))
+    input = open(os.path.join(sys.prefix, 'obp_python/sandbox/example_import.json'))
   req = sandboxImport(src=input)
   if example:
     input.close()

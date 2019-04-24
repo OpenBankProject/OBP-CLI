@@ -1,3 +1,4 @@
 # For building / pushing to pypi
 python setup.py sdist bdist_wheel
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 python -m twine upload --skip-existing dist/*
