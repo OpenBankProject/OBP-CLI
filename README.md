@@ -8,23 +8,36 @@ Python Utilities to make working with Open Bank Project api easier
 pip install obp-python # Requires at least python 3
 ```
 
-## Run a utility
+> If your operating system defaults to python two, you might need to run 
+  `pip3 install obp-python # Requires at least python 3` 
+
+## Run 
 
 e.g.
 ```
-obp getauth
+obp # Displays available commands
+obp init # initalise against an open bank project instance
+obp addrole --role-name CanCreateSandbox
+obp sandboximport --example Import a very small sample dataset
 ```
 
-## Utilities
+## Other Utilities
+Prefix all these commands with `obp`:
 
 - getauth : Get a direct login token
+- addrole : Add a role to your user (only if super user)
+- getuser : Get your user info
+- getuserid: Get yur user id only
+- sandboximport --example : import ver small sample dataset
+- sandboximport --input example.json : import own dataset (must be obp format)
 
 
 #### Development / Contributing
-**Note** You can ignore this is your just using the utlity. This is 
+
+> **Note** You can ignore this is your just using the utlity. This is 
 just for developing the utlity.
 
-To work on this utility as a developer. 
+To work on this utility as a developer:
 ##### Building 
 
 ```
@@ -41,5 +54,6 @@ pip install -e <path-to-this-repo> # -e means Install  a  project  in editable m
 ```
 ###### Update history
 
+- 0.19 Added sandboximport utility `obp sandboximport --example`
 - 0.0.9
 Switch to use `OBP_API_HOST` instead of `OBP_ENDPOINT`
