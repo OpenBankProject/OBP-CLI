@@ -15,7 +15,7 @@ from .getUserId import getUserId
 def cli():
   pass
 
-@cli.command(help="Bulk import sandbox data from json input")
+@cli.command(help="🚜 Bulk import sandbox data from json input")
 @click.option('--input', type=click.File('rb'), required=False, help="Import from file")
 @click.option('--example', required=False, is_flag=True, 
               help="Auto import very small example dataset")
@@ -34,7 +34,7 @@ def sandboximport(input=None, example=False):
     exit(req.text)
 
 
-@cli.command(help="Initalize connection to your Open Bank Project instance")
+@cli.command(help="💡 Initalize connection to your Open Bank Project instance")
 def init():
   init_config_dir()
   OBP_API_HOST = click.prompt("Please enter your API_HOST: ", 
@@ -80,12 +80,12 @@ def init():
 
   click.echo("Init complete")
 
-@cli.command(help="Get your DirectLogin token")
+@cli.command(help="🔑 Get your DirectLogin token")
 def getauth():
   authToken = getAuthToken()
   print(json.loads(authToken.text))
 
-@cli.command(help="Get your user info")
+@cli.command(help="😃 Get your user info")
 def getuser():
   req = getUserId()
   if req.status_code == 201 or req.status_code == 200:
@@ -93,7 +93,7 @@ def getuser():
   else:
     exit(req.text)
 
-@cli.command(help="Get your user id")
+@cli.command(help="📋 Get your user id")
 def getuserid():
   req = getUserId()
   if req.status_code == 201 or req.status_code == 200:
@@ -102,7 +102,7 @@ def getuserid():
   else:
     exit(req.text)
 
-@cli.command(help="Add a role for current user")
+@cli.command(help="🚧 Add a role for current user")
 @click.option('--role-name', required=True)
 def addrole(role_name):
   req = addRole(role=role_name, require_bank_id=False)
