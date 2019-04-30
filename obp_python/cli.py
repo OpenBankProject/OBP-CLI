@@ -10,6 +10,7 @@ from .sandboxImport import sandboxImport
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
+from .addUser import addUser
 
 @click.group()
 def cli():
@@ -99,6 +100,20 @@ def getuserid():
   if req.status_code == 201 or req.status_code == 200:
     user_id = json.loads(req.text)['user_id']
     click.echo({'user_id': user_id})
+  else:
+    exit(req.text)
+
+@cli.command(help="✍  Add a user")
+@click.option('--username', prompt=True)
+@click.option('--email', prompt=True)
+@click.option('--password', prompt=True, hide_input=True)
+@click.option('--firstname', prompt=True)
+@click.option('--lastname', prompt=True)
+def adduser(username, email, password, firstname, lastname):
+  req = addUser(username=username, email=email, password=password, 
+                firstname=firstname, lastname=lastname)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
   else:
     exit(req.text)
 
