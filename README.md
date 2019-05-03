@@ -31,18 +31,7 @@ Commands:
 ```
 
 
-## Other Utilities
-Prefix all these commands with `obp`:
-
-- getauth : Get a direct login token
-- addrole : Add a role to your user (only if super user)
-- getuser : Get your user info
-- getuserid: Get yur user id only
-- sandboximport --example : import ver small sample dataset
-- sandboximport --input example.json : import own dataset (must be obp format)
-
-
-#### Development / Contributing
+#### Development / Contributing (Development only)
 
 > **Note** You can ignore this is your just using the utlity. This is 
 just for developing the utlity.
