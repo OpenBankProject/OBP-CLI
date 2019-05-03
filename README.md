@@ -11,15 +11,25 @@ pip install obp-python # Requires at least python 3
 > If your operating system defaults to python two, you might need to run 
   `pip3 install obp-python # Requires at least python 3` 
 
-## Run 
+## Usage
+```
+Usage: obp [OPTIONS] COMMAND [ARGS]...
 
-e.g.
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  addaccount     📁 Add a bank account
+  addrole        🚧 Add a role for current user
+  adduser        📝 Add a user
+  getauth        🔑 Get your DirectLogin token
+  getbanks       🏦 Get list of banks
+  getuser        😃 Get your user info
+  getuserid      📋 Get your user id
+  init           💡 Initalize connection to your Open Bank Project instance
+  sandboximport  🚜 Bulk import sandbox data from json input
 ```
-obp # Displays available commands
-obp init # initalise against an open bank project instance
-obp addrole --role-name CanCreateSandbox
-obp sandboximport --example Import a very small sample dataset
-```
+
 
 ## Other Utilities
 Prefix all these commands with `obp`:
