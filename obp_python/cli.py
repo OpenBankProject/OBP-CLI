@@ -11,6 +11,9 @@ from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
 from .addUser import addUser
+from .createAccount import createAccount
+from .getBanks import getBanks
+import pprint
 
 @click.group()
 def cli():
@@ -103,7 +106,16 @@ def getuserid():
   else:
     exit(req.text)
 
-@cli.command(help="✍  Add a user")
+@cli.command(help="🏦 Get list of banks")
+def getbanks():
+  req = getBanks()
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="📝 Add a user")
 @click.option('--username', prompt=True)
 @click.option('--email', prompt=True)
 @click.option('--password', prompt=True, hide_input=True)
@@ -112,6 +124,27 @@ def getuserid():
 def adduser(username, email, password, firstname, lastname):
   req = addUser(username=username, email=email, password=password, 
                 firstname=firstname, lastname=lastname)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="📁 Add a bank account")
+@click.option('--userid', prompt=True, help="Use 'obp getuserid' to find it")
+@click.option('--accountid', default="abc123", prompt=True, help="Your choice of account id")
+@click.option('--label', default="Label", prompt=True)
+@click.option('--type', default="CURRENT", prompt=True, hide_input=True)
+@click.option('--currency', default="EUR", prompt=True)
+@click.option('--balance', default="0", prompt=True)
+@click.option('--branchid', default="1234", prompt=True)
+@click.option('--bankid', prompt=True, help="Try getbanks")
+def addaccount(userid, accountid, label, type, currency, balance,
+               branchid, bankid):
+
+  req = createAccount(userid=userid, label=label, type=type,
+                      currency=currency, balance=balance,
+                      bankid=bankid, branchid=branchid,
+                      accountid=accountid)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
