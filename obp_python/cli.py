@@ -7,12 +7,14 @@ from .init import (init_config_dir, set_obp_api_host, set_obp_username,
                   set_obp_password, set_obp_consumer_key, set_obp_auth_token,
                   set_obp_user_id, get_config)
 from .sandboxImport import sandboxImport
+from .importBranches import importBranches
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
 from .addUser import addUser
 from .createAccount import createAccount
 from .getBanks import getBanks
+from .deleteBranches import deleteBranches
 import pprint
 
 @click.group()
@@ -158,3 +160,13 @@ def addrole(role_name):
     click.echo(req.text)
   else:
     exit(req.text)
+
+@cli.command(help="⚠️  🏦 Delete all branches")
+@click.option('--bank-id', required=True)
+def deletebranches(bank_id):
+  req = deleteBranches(bank_id)
+
+@cli.command(help="🚜 Import branches from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importbranches(spreadsheet):
+  req = importBranches(spreadsheet)

@@ -32,7 +32,6 @@ def dms2dec(dms_str):
     dms_str = re.sub(r'\s', '', dms_str)
     
     sign = -1 if re.search('[swSW]', dms_str) else 1
-    import pdb;pdb.set_trace() 
     numbers = [*filter(len, re.split('\D+', dms_str, maxsplit=4))]
 
     degree = numbers[0]
