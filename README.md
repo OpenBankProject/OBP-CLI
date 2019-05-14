@@ -19,15 +19,17 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  addaccount     📁 Add a bank account
-  addrole        🚧 Add a role for current user
-  adduser        📝 Add a user
-  getauth        🔑 Get your DirectLogin token
-  getbanks       🏦 Get list of banks
-  getuser        😃 Get your user info
-  getuserid      📋 Get your user id
-  init           💡 Initalize connection to your Open Bank Project instance
-  sandboximport  🚜 Bulk import sandbox data from json input
+  addaccount      📁 Add a bank account
+  addrole         🚧 Add a role for current user
+  adduser         📝 Add a user
+  deletebranches  ⚠️ 🏦 Delete all branches
+  getauth         🔑 Get your DirectLogin token
+  getbanks        🏦 Get list of banks
+  getuser         😃 Get your user info
+  getuserid       📋 Get your user id
+  importbranches  🚜 Import branches from spreadsheet template
+  init            💡 Initalize connection to your Open Bank Project instance
+  sandboximport   🚜 Bulk import sandbox data from json input
 ```
 
 
