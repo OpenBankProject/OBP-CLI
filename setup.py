@@ -21,7 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3",
-    install_requires=['click', 'requests', 'appdirs'],
+    install_requires=['click', 'requests', 'appdirs', 'dms2dec'],
     entry_points='''
       [console_scripts]
       obp=obp_python:cli
