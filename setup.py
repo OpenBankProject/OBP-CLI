@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="obp_python",
-    version="0.190",
+    version="0.191",
     author="",
     author_email="",
     description="Beta Open Bank Project Python Utilities",
@@ -21,7 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3",
-    install_requires=['click', 'requests', 'appdirs', 'dms2dec'],
+    install_requires=['click', 'requests', 'appdirs', 'dms2dec', 'pyexcel_ods'],
     entry_points='''
       [console_scripts]
       obp=obp_python:cli
