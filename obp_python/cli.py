@@ -14,6 +14,7 @@ from .getUserId import getUserId
 from .addUser import addUser
 from .createAccount import createAccount
 from .getBanks import getBanks
+from .getAccountsHeld import getAccountsHeld
 from .deleteBranches import deleteBranches
 import pprint
 
@@ -111,6 +112,16 @@ def getuserid():
 @cli.command(help="🏦 Get list of banks")
 def getbanks():
   req = getBanks()
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="📁 Get list of accounts held")
+@click.option('--bank-id', prompt=True)
+def getaccountsheld(bank_id):
+  req = getAccountsHeld(bank_id)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
