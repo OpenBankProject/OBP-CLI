@@ -34,7 +34,7 @@ Commands:
 ```
 
 
-#### Development / Contributing (Development only)
+#### Contributing
 
 > **Note** You can ignore this is your just using the utlity. This is 
 just for developing the utlity.
