@@ -80,7 +80,7 @@ def importBranches(spreadsheet=None, sheet_name=None):
             'country_code': county_code
         },
         'location' : {
-            'latitude': float(latitude),
+            'latitude': latitude,
             'longitude': float(longitude)
         },
         'meta': {
