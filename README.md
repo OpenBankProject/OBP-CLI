@@ -9,7 +9,8 @@ pip install --user obp-python # Requires at least python 3
 ```
 
 > Warning: If your operating system defaults to python 2, your pip command might be:
-``
+
+```
 pip3 install --user obp-python
 #or 
 pip3.6 install --user obp-python
