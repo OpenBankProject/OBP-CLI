@@ -33,6 +33,25 @@ Commands:
   sandboximport    🚜 Bulk import sandbox data from json input
 ```
 
+## Examples
+
+You must initalize the obp cli once, by doing:
+```
+obp init
+```
+
+### Generate Direct Login Token
+```
+obp init 
+Please enter your API_HOST: api.example.com
+Please enter your username:
+Please enter your password: : 
+Repeat for confirmation: 
+... generating direct login token
+Please enter your OBP_CONSUMER_KEY: # Go to api.example.com, then "Get API Key" to generate consumer key.
+obp getauth # Displays your DirectLogin token
+```
+
 
 #### Contributing
 
