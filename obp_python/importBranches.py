@@ -57,6 +57,7 @@ def importBranches(spreadsheet=None, sheet_name=None):
       latitude = get_value(10, branch)
       longitude = get_value(11, branch)
       branch_routing_scheme = get_value(12, branch)
+      branch_routing_address = get_value(13, branch)
       is_accessible = get_value(14, branch)
       accessible_features = get_value(15, branch)
       branch_type = get_value(16, branch)
@@ -80,7 +81,7 @@ def importBranches(spreadsheet=None, sheet_name=None):
             'country_code': county_code
         },
         'location' : {
-            'latitude': latitude,
+            'latitude': float(latitude),
             'longitude': float(longitude)
         },
         'meta': {
@@ -108,8 +109,8 @@ def importBranches(spreadsheet=None, sheet_name=None):
             'sunday': {'opening_time': '', 'closing_time': ''},
           },
           'branch_routing': {
-                'scheme': 'OBP',
-                'address': '123abc'},
+                'scheme': branch_routing_scheme,
+                'address': branch_routing_address},
           'is_accessible': is_accessible,
           'accessibleFeatures': accessible_features,
           'branch_type': branch_type,
