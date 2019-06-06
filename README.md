@@ -1,8 +1,28 @@
-Python Utilities to make working with Open Bank Project api easier
 
-- uses python3
+## Open Bank Project CLI
+A command line utility (CLI) to work with the Open Bank Project sandbox called `obp`.
+
+With the obp cli you can:
+
+- Initiate an api connection to the sandbox 
+  - *note* you still need to sign-up from the sandbox homepage first to create your username & password
+- Get your DirectLogin token
+- Get your user information
+- Get your user id 
+- Get banks 
+- Get (your) accounts held at the bank
+
+Also, depending on your account access you may:
+- Create a bank account
+- Add roles to a user
+- Import/Delete branches
+- Import dummy bank data 
+
 
 ## Install
+
+- Requires python3
+- Requires pip (see https://pip.pypa.io/en/stable/installing/)
 
 ```
 pip install --user obp-python # Requires at least python 3
