@@ -54,8 +54,9 @@ Commands:
   getbanks         🏦 Get list of banks
   getuser          😃 Get your user info
   getuserid        📋 Get your user id
-  importbranches   🚜 Import branches from spreadsheet template
-  init             💡 Initalize connection to your Open Bank Project instance
+  importaccounts   🚜 Import accounts from spreadsheet...
+  importbranches   🚜 Import branches from spreadsheet...
+  init             💡 Initalize connection to your Open Bank...
   sandboximport    🚜 Bulk import sandbox data from json input
 ```
 
