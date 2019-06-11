@@ -45,20 +45,22 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  addaccount       📁 Add a bank account
-  addrole          🚧 Add a role for current user
-  adduser          📝 Add a user
-  deletebranches   ⚠️ 🏦 Delete all branches
-  getaccountsheld  📁 Get list of accounts held
-  getauth          🔑 Get your DirectLogin token
-  getbanks         🏦 Get list of banks
-  getuser          😃 Get your user info
-  getuserid        📋 Get your user id
-  importaccounts   🚜 Import accounts from spreadsheet template
-  importbranches   🚜 Import branches from spreadsheet template
-  importusers      🚜 Import users from spreadsheet template
-  init             💡 Initalize connection to your Open Bank Project instance
-  sandboximport    🚜 Bulk import sandbox data from json input
+  addaccount          📁 Add a bank account
+  addrole             🚧 Add a role for current user
+  adduser             📝 Add a user
+  deletebranches      ⚠️ 🏦 Delete all branches
+  getaccountbyid      📁 Get account by id (includes balance)
+  getaccountsheld     📁 Get list of accounts held
+  getauth             🔑 Get your DirectLogin token
+  getbanks            🏦 Get list of banks
+  getuser             😃 Get your user info
+  getuserid           📋 Get your user id
+  importaccounts      🚜 Import accounts from spreadsheet template
+  importbranches      🚜 Import branches from spreadsheet template
+  importtransactions  🚜 Import transactions from spreadsheet template
+  importusers         🚜 Import users from spreadsheet template
+  init                💡 Initalize connection to your Open Bank Project...
+  sandboximport       🚜 Bulk import sandbox data from json input
 ```
 
 ## Examples
