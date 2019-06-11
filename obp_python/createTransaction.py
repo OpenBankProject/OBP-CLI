@@ -21,7 +21,7 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
             }
     
   
-  url = get_config('OBP_API_HOST') + '/obp/v3.1.0/banks/{bank_id}/accounts/{to_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(bank_id=to_bank_id, to_account_id=to_account_id, challenge_type=challenge_type)
+  url = get_config('OBP_API_HOST') + '/obp/v1.4.0/banks/{bank_id}/accounts/{to_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(bank_id=to_bank_id, to_account_id=to_account_id, challenge_type=challenge_type)
   
   authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
   headers = {'Content-Type': 'application/json',
