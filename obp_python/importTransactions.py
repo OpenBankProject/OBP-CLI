@@ -23,7 +23,6 @@ def importTransactions(spreadsheet=None, sheet_name=None):
   failCount = 0
   failedTransactions = []
 
-  import pdb;pdb.set_trace()
   for index, transaction in enumerate(sheetdata[1:][0][1:]): #skips sheetname, and header
     try:
       to_account_id = get_value(0, transaction)

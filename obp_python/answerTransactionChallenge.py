@@ -14,5 +14,4 @@ def answerTransactionChallenge(bank_id=None, account_id=None, transation_req_id=
     headers = {'Content-Type': 'application/json',
               'Authorization': authorization}
     req = requests.post(url, headers=headers, json=payload)
-    import pdb;pdb.set_trace()
     return req
