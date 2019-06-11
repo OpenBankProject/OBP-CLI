@@ -18,6 +18,7 @@ from .addUser import addUser
 from .createAccount import createAccount
 from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
+from .getAccount import getAccountById
 from .deleteBranches import deleteBranches
 import pprint
 
@@ -125,6 +126,17 @@ def getbanks():
 @click.option('--bank-id', prompt=True)
 def getaccountsheld(bank_id):
   req = getAccountsHeld(bank_id)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="📁 Get account by id (includes balance)")
+@click.option('--bank-id', prompt=True)
+@click.option('--account-id', prompt=True)
+def getaccountbyid(bank_id, account_id):
+  req = getAccountById(bank_id=bank_id, account_id=account_id)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
