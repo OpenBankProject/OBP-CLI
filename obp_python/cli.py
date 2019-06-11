@@ -9,6 +9,7 @@ from .init import (init_config_dir, set_obp_api_host, set_obp_username,
 from .sandboxImport import sandboxImport
 from .importBranches import importBranches
 from .importAccounts import importAccounts
+from .importUsers import importUsers
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
@@ -187,3 +188,8 @@ def importbranches(spreadsheet):
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
 def importaccounts(spreadsheet):
   req = importAccounts(spreadsheet)
+
+@cli.command(help="🚜 Import users from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importusers(spreadsheet):
+  req = importUsers(spreadsheet)
