@@ -11,6 +11,7 @@ from .importBranches import importBranches
 from .importAccounts import importAccounts
 from .importTransactions import importTransactions
 from .importUsers import importUsers
+from .importCustomers import importCustomers
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
@@ -211,3 +212,8 @@ def importusers(spreadsheet):
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
 def importtransactions(spreadsheet):
   req = importTransactions(spreadsheet)
+
+@cli.command(help="🚜 Import customers from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importcustomers(spreadsheet):
+  req = importCustomers(spreadsheet)
