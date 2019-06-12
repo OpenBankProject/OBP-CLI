@@ -3,6 +3,8 @@ from .init import get_config
 from pyexcel_ods import get_data
 import sys, traceback
 from .createCustomer import createCustomer
+from .getUserIdByUsername import getUserIdByUsername
+from .linkUserToCustomer import linkUserToCustomer
 
 def importCustomers(spreadsheet=None, sheet_name=None):
   
@@ -68,6 +70,19 @@ def importCustomers(spreadsheet=None, sheet_name=None):
                                 title=title, branch_id=branch_id, name_suffix=name_suffix)
 
       print(response.text)
+      if response.status_code is 201 or response.status_code is 200 \
+        and bool(username) is not False:
+        # Link customer to 'username' if username is presnt in sheet
+        customer_id = response.json()['customer_id']
+        req = getUserIdByUsername(username=username)
+        if req.status_code is 200:
+          user_id = req.json()['user_id']
+          req = linkUserToCustomer(bank_id=bank_id, user_id=user_id,
+                                    customer_id=customer_id)
+          if req.status_code is not 201:
+            print("WARNING: could not create link between User and Customer")
+
+
       if response.status_code is 200:
         print("WARNING: customer aleady exists")
         print(response.text)
