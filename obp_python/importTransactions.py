@@ -39,7 +39,12 @@ def importTransactions(spreadsheet=None, sheet_name=None):
                                   challenge_type=challenge_type)
 
       print(response.text)
-      if response.status_code is 201:
+      if response.status_code is 201 or response.status_code is 202:
+        # 201 means transaction was accepted (less than 1000 by default always
+        # accepted
+        # 202 means he request has been accepted for processing, and an 
+        # automated attempt will be made to accept the request. 
+        # TODO surface the sucess of a 202 response to the cli output
         print(response.text)
         sucessCount = sucessCount + 1
       else:

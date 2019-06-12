@@ -36,7 +36,7 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
       # Answer transaction request right away
       transation_req_id=req.json()['id']
       challenge_id =req.json()['challenge']['id']
-      answerTransactionChallenge(bank_id=to_bank_id, account_id=to_account_id, 
+      req = answerTransactionChallenge(bank_id=to_bank_id, account_id=to_account_id, 
                                   transation_req_id=transation_req_id,
                                   challenge_id=challenge_id)
 
