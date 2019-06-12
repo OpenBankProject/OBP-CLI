@@ -6,6 +6,7 @@ from .createCustomer import createCustomer
 from .getUserIdByUsername import getUserIdByUsername
 from .linkUserToCustomer import linkUserToCustomer
 
+
 def importCustomers(spreadsheet=None, sheet_name=None):
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
@@ -81,7 +82,6 @@ def importCustomers(spreadsheet=None, sheet_name=None):
                                     customer_id=customer_id)
           if req.status_code is not 201:
             print("WARNING: could not create link between User and Customer")
-
 
       if response.status_code is 200:
         print("WARNING: customer aleady exists")
