@@ -21,6 +21,7 @@ from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
 from .deleteBranches import deleteBranches
+from .getUserIdByUsername import getUserIdByUsername
 import pprint
 
 @click.group()
@@ -114,6 +115,16 @@ def getuserid():
   else:
     exit(req.text)
 
+@cli.command(help="📋 Get user id by username")
+@click.option('--username', prompt=True)
+def getuseridbyusername(username):
+  req = getUserIdByUsername(username=username)
+  if req.status_code == 201 or req.status_code == 200:
+    user_id = json.loads(req.text)['user_id']
+    click.echo({'user_id': user_id})
+  else:
+    exit(req.text)
+
 @cli.command(help="🏦 Get list of banks")
 def getbanks():
   req = getBanks()
@@ -180,9 +191,14 @@ def addaccount(userid, accountid, label, type, currency, balance,
     exit(req.text)
 
 @cli.command(help="🚧 Add a role for current user")
-@click.option('--role-name', required=True)
-def addrole(role_name):
-  req = addRole(role=role_name, require_bank_id=False)
+@click.option('--role-name', required=True, help="Name of the role/entitelment")
+@click.option('--bank-id', required=False, help="Some roles need a bank id")
+@click.option('--user-id', required=False, help="Add role to a differnt user")
+def addrole(role_name, bank_id=None, user_id=None):
+  if bank_id is None:
+    req = addRole(role=role_name, user_id=user_id)
+  else:
+    req = addRole(role=role_name, bank_id=bank_id, user_id=user_id)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
