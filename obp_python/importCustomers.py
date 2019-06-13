@@ -5,6 +5,7 @@ import sys, traceback
 from .createCustomer import createCustomer
 from .getUserIdByUsername import getUserIdByUsername
 from .linkUserToCustomer import linkUserToCustomer
+from .updateCustomerNumber import updateCustomerNumber
 
 
 def importCustomers(spreadsheet=None, sheet_name=None):
@@ -71,9 +72,17 @@ def importCustomers(spreadsheet=None, sheet_name=None):
                                 title=title, branch_id=branch_id, name_suffix=name_suffix)
 
       print(response.text)
+      # Update customer number to the number specified in the spreadsheet
+      # We need this because the createCustomer api call does not store the
+      # customer number upon initial creation TODO change this.
+      if response.status_code is 201 or response.status_code is 200:
+        customer_id = response.json()['customer_id']
+        updateCustomerNumber(bank_id=bank_id, customer_id=customer_id, 
+                              customer_number=customer_number)
+  
+      # Link customer to 'username' if username is presnt in sheet
       if response.status_code is 201 or response.status_code is 200 \
         and bool(username) is not False:
-        # Link customer to 'username' if username is presnt in sheet
         customer_id = response.json()['customer_id']
         req = getUserIdByUsername(username=username)
         if req.status_code is 200:
