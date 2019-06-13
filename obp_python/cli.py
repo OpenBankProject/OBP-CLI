@@ -181,8 +181,12 @@ def addaccount(userid, accountid, label, type, currency, balance,
 
 @cli.command(help="🚧 Add a role for current user")
 @click.option('--role-name', required=True)
-def addrole(role_name):
-  req = addRole(role=role_name, require_bank_id=False)
+@click.option('--bank-id', required=False)
+def addrole(role_name, bank_id=None):
+  if bank_id is None:
+    req = addRole(role=role_name)
+  else:
+    req = addRole(role=role_name, bank_id=bank_id)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
