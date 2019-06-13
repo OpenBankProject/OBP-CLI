@@ -57,6 +57,7 @@ Commands:
   getuserid           📋 Get your user id
   importaccounts      🚜 Import accounts from spreadsheet template
   importbranches      🚜 Import branches from spreadsheet template
+  importcustomers     🚜 Import customers from spreadsheet template
   importtransactions  🚜 Import transactions from spreadsheet template
   importusers         🚜 Import users from spreadsheet template
   init                💡 Initalize connection to your Open Bank Project...
