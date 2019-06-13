@@ -22,6 +22,5 @@ def linkUserToCustomer(bank_id=None, user_id=None, customer_id=None):
   headers = {'Content-Type': 'application/json',
             'Authorization': authorization}
   req = requests.post(url, headers=headers, json=payload)
-  import pdb;pdb.set_trace()
 
   return req
