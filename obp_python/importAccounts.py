@@ -9,6 +9,13 @@ from .createAccount import createAccount
 from .createTransaction import createTransaction
 
 def importAccounts(spreadsheet=None, sheet_name=None):
+  """
+  Import accouts into Open Bank Project via ods spreadsheet.
+
+  Requires roles/entitlement(s)
+  - CanCreateAccount
+  - canCreateAnyTransactionRequest (for setting initial balance)
+  """
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
@@ -74,7 +81,11 @@ def importAccounts(spreadsheet=None, sheet_name=None):
                         currency=balance_currency, amount=balance_amount, 
                         description="Opening balance",
                         challenge_type="SANDBOX_TAN")
-        if req.status_code is not 201:
+        # 201 response is automatic for small amounts
+        # 202 means transaction > amount 1000 was auto accepted by import tool
+        if req.status_code is 201 or req.status_code is 202:
+          pass # Transaction request success
+        else:
           print("WARNING: Could not set initial balance")
           print(req.json())
         sucessCount = sucessCount + 1
