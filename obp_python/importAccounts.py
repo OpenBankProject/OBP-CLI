@@ -27,6 +27,8 @@ def importAccounts(spreadsheet=None, sheet_name=None):
   failedAccounts = []
 
   for index, account in enumerate(sheetdata[1:][0][1:]): #skips sheetname, and header
+    if sheetdata[1:][0][1:][index] == []:
+      continue # Skip empty rows
     try:
       username = get_value(0, account)
       bank_id = get_value(1, account)
