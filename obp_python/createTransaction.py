@@ -17,6 +17,7 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
   obp addrole --role-name CanCreateAnyTransactionRequest --bank-id <bank-id>
   """
   amount =  float(str(amount).replace(',',''))
+
   payload = {
             "to": {
               "account_id": str(to_account_id), 
