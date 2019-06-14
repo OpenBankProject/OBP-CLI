@@ -7,7 +7,16 @@ from .answerTransactionChallenge import answerTransactionChallenge
 def createTransaction(to_account_id=None, to_bank_id=None, currency=None, 
                 amount=None, description=None, 
                 challenge_type="SANDBOX_TAN"):
-
+  """
+  Create a transaction request
+  
+  If you are wanting to create transactions on behalf of another user,
+  then you require the entitlement `canCreateAnyTransactionRequest`.
+  
+  e.g. using the cli:
+  obp addrole --role-name CanCreateAnyTransactionRequest --bank-id <bank-id>
+  """
+  amount =  float(str(amount).replace(',',''))
   payload = {
             "to": {
               "account_id": str(to_account_id), 
@@ -21,7 +30,8 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
             }
     
   
-  url = get_config('OBP_API_HOST') + '/obp/v1.4.0/banks/{bank_id}/accounts/{to_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(bank_id=to_bank_id, to_account_id=to_account_id, challenge_type=challenge_type)
+  url = get_config('OBP_API_HOST') + '/obp/v2.2.0/banks/{bank_id}/accounts/{to_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(bank_id=to_bank_id, to_account_id=to_account_id, challenge_type=challenge_type)
+
   
   authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
   headers = {'Content-Type': 'application/json',

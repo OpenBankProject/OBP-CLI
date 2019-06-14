@@ -4,8 +4,7 @@ import json
 from .init import get_config
 
 def createAccount(bankid=None, userid=None, currency=None, label=None, 
-                  type=None, balance=None, branchid=None, 
-                  accountid=None):
+                  type=None, branchid=None, accountid=None):
 
   payload = {
       "user_id": userid,
@@ -13,7 +12,7 @@ def createAccount(bankid=None, userid=None, currency=None, label=None,
       "type": str(type),
       "balance": {
         "currency": currency,
-        "amount": balance
+        "amount": 0 # Use transaction requests to set balance
       },
       "branch_id": branchid,
       "account_routing": {
