@@ -8,6 +8,7 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
                 amount=None, description=None, 
                 challenge_type="SANDBOX_TAN"):
 
+  amount =  float(str(amount.replace(',','')))
   payload = {
             "to": {
               "account_id": str(to_account_id), 

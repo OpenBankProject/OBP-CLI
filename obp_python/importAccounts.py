@@ -6,6 +6,7 @@ from pyexcel_ods import get_data
 import sys, traceback
 import re
 from .createAccount import createAccount
+from .createTransaction import createTransaction
 
 def importAccounts(spreadsheet=None, sheet_name=None):
   
@@ -36,7 +37,7 @@ def importAccounts(spreadsheet=None, sheet_name=None):
       label = get_value(3, account)
       account_type = get_value(4, account)
       balance_currency = get_value(5, account)
-      balance_amount = 0
+      balance_amount = get_value(6, account)
       branch_id = get_value(7, account)
       account_routing_scheme = get_value(8, account)
       account_routing_address = get_value(9, account)
@@ -57,16 +58,25 @@ def importAccounts(spreadsheet=None, sheet_name=None):
 
       #Post accounts to api
       response = createAccount(bankid=bank_id, userid=user_id, currency=balance_currency, label=label,
-                  type=account_type, balance=balance_amount, branchid=branch_id,
+                  type=account_type, branchid=branch_id,
                   accountid=account_id)
 
       print(response.text)
-      if response.status_code is 200:
-        print("WARNING: account aleady exists")
-        print(response.text)
+      #Create account returns 200 BUG: https://github.com/OpenBankProject/OBP-API/issues/1314
+      if response.status_code is 201 \
+        or response.status_code is 200: 
         sucessCount = sucessCount + 1
-      elif response.status_code is 201:
         print(response.text)
+        # Set initial balance with transaction request
+        # The create account api call must start with zero (0) so we
+        # must create a transaction against the account to set initial balance
+        req = createTransaction(to_account_id=account_id, to_bank_id=bank_id, 
+                        currency=balance_currency, amount=balance_amount, 
+                        description="Opening balance",
+                        challenge_type="SANDBOX_TAN")
+        if req.status_code is not 201:
+          print("WARNING: Could not set initial balance")
+          print(req.json())
         sucessCount = sucessCount + 1
       else:
         print(response.text)
