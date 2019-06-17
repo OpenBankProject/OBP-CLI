@@ -37,15 +37,20 @@ def importTransactions(spreadsheet=None, sheet_name=None):
 
   for index, transaction in enumerate(sheetdata[1:][0][1:]): #skips sheetname, and header
     try:
-      to_account_id = get_value(0, transaction)
-      to_bank_id = get_value(1, transaction)
-      currency = get_value(2, transaction)
-      amount = get_value(3, transaction)
-      description = get_value(4, transaction)
-      challenge_type = get_value(5, transaction)
+      from_account_id = get_value(0, transaction)
+      from_bank_id = get_value(1, transaction)
+      to_account_id = get_value(2, transaction)
+      to_bank_id = get_value(3, transaction)
+      currency = get_value(4, transaction)
+      amount = get_value(5, transaction)
+      description = get_value(6, transaction)
+      challenge_type = get_value(7, transaction)
 
       #Post transaction to api
-      response = createTransaction(to_account_id=to_account_id, to_bank_id=to_bank_id, 
+      response = createTransaction(from_account_id=from_account_id, 
+                                  from_bank_id=from_bank_id, 
+                                  to_account_id=to_account_id, 
+                                  to_bank_id=to_bank_id, 
                                   currency=currency, amount=amount, 
                                   description=description, 
                                   challenge_type=challenge_type)
