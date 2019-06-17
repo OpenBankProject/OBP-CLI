@@ -16,6 +16,7 @@ from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
 from .addUser import addUser
+from .addFx import addFx
 from .createAccount import createAccount
 from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
@@ -199,6 +200,23 @@ def addrole(role_name, bank_id=None, user_id=None):
     req = addRole(role=role_name, user_id=user_id)
   else:
     req = addRole(role=role_name, bank_id=bank_id, user_id=user_id)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="📉 Add exchange rate (FX)")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--from-currency', required=True, prompt=True)
+@click.option('--to-currency', required=True, prompt=True)
+@click.option('--conversion-value', required=True, prompt=True)
+@click.option('--inverse-conversion-value', required=True, prompt=True)
+@click.option('--effective-date', required=True, prompt=True, 
+              help="2017-09-19T00:00:00Z")
+def addfx(bank_id, from_currency, to_currency, conversion_value,
+          inverse_conversion_value, effective_date):
+  req = addFx(bank_id, from_currency, to_currency, conversion_value,
+              inverse_conversion_value, effective_date)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
