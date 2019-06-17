@@ -174,18 +174,15 @@ def adduser(username, email, password, firstname, lastname):
 @click.option('--userid', prompt=True, help="Use 'obp getuserid' to find it")
 @click.option('--accountid', default="abc123", prompt=True, help="Your choice of account id")
 @click.option('--label', default="Label", prompt=True)
-@click.option('--type', default="CURRENT", prompt=True, hide_input=True)
+@click.option('--type', default="CURRENT", prompt=True)
 @click.option('--currency', default="EUR", prompt=True)
-@click.option('--balance', default="0", prompt=True)
 @click.option('--branchid', default="1234", prompt=True)
 @click.option('--bankid', prompt=True, help="Try getbanks")
-def addaccount(userid, accountid, label, type, currency, balance,
-               branchid, bankid):
+def addaccount(userid, accountid, label, type, currency, branchid, bankid):
 
   req = createAccount(userid=userid, label=label, type=type,
-                      currency=currency, balance=balance,
-                      bankid=bankid, branchid=branchid,
-                      accountid=accountid)
+                      currency=currency, bankid=bankid, 
+                      branchid=branchid, accountid=accountid)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
