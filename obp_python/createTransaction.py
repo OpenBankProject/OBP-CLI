@@ -4,7 +4,8 @@ import json
 from .init import get_config
 from .answerTransactionChallenge import answerTransactionChallenge
 
-def createTransaction(to_account_id=None, to_bank_id=None, currency=None, 
+def createTransaction(from_account_id=None, from_bank_id=None, 
+                to_account_id=None, to_bank_id=None, currency=None, 
                 amount=None, description=None, 
                 challenge_type="SANDBOX_TAN"):
   """
@@ -30,7 +31,7 @@ def createTransaction(to_account_id=None, to_bank_id=None, currency=None,
             }
     
   
-  url = get_config('OBP_API_HOST') + '/obp/v2.2.0/banks/{bank_id}/accounts/{to_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(bank_id=to_bank_id, to_account_id=to_account_id, challenge_type=challenge_type)
+  url = get_config('OBP_API_HOST') + '/obp/v2.2.0/banks/{from_bank_id}/accounts/{from_account_id}/owner/transaction-request-types/{challenge_type}/transaction-requests'.format(from_bank_id=from_bank_id, from_account_id=from_account_id, challenge_type=challenge_type)
 
   
   authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
