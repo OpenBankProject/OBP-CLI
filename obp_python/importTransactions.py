@@ -5,6 +5,18 @@ import sys, traceback
 from .createTransaction import createTransaction
 
 def importTransactions(spreadsheet=None, sheet_name=None):
+  """
+  Import transactions from a spreadsheet template
+
+  Creates and auto-accepts transaction reqests against 
+  the account(s) specified in the template.
+  
+  If importing transactions against accounts which are not
+  owned by your account, then you require the permission: 
+  canCreateAnyTransactionRequest
+
+  e.g. obp addrole --role-name CanCreateAnyTransactionRequest --bank-id gh.29.uk.x
+  """
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
