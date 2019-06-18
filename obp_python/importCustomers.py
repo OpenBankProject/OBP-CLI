@@ -89,6 +89,9 @@ def importCustomers(spreadsheet=None, sheet_name=None):
           user_id = req.json()['user_id']
           req = linkUserToCustomer(bank_id=bank_id, user_id=user_id,
                                     customer_id=customer_id)
+          if req.status_code == 400:
+            print(req.text)
+            exit(-1)
           if req.status_code is not 201:
             print("WARNING: could not create link between User and Customer")
 
