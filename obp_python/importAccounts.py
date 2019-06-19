@@ -23,7 +23,8 @@ def importAccounts(spreadsheet=None, sheet_name=None):
   OBP_API_HOST = get_config('OBP_API_HOST')
 
   # Validate entitlements
-  requiredEntitlements = ['CanCreateAccount', 'CanCreateAnyTransactionRequest']
+  requiredEntitlements = ['CanCreateAccount', 'CanCreateAnyTransactionRequest',
+                          'CanGetAnyUser']
   fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
 
   if fail is True:
