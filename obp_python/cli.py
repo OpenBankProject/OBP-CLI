@@ -281,7 +281,7 @@ def addcustomer(bank_id, username, customer_number, legal_name, title,
   else:
     exit(req.text)
 
-@cli.command(help="🚧 Link user to a customer")
+@cli.command(help="🔗 Link user to a customer")
 @click.option('--bank-id', default="gh.29.uk.x", prompt=True)
 @click.option('--user-id', required=True, prompt=True)
 @click.option('--customer-id', required=True, prompt=True)
