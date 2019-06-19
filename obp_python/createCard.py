@@ -53,7 +53,7 @@ def createCard(bank_id=None, card_number=None,
     ],  
     "collected": collected,  
     "posted": posted,  
-    "customer_id":"7uy8a7e4-6d02-40e3-a129-0b2bf89de8uh"
+    "customer_id": customer_id
   }
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/management/banks/{bank_id}/cards'.format(bank_id=bank_id)
   
