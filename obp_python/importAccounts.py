@@ -77,7 +77,8 @@ def importAccounts(spreadsheet=None, sheet_name=None):
         # Set initial balance with transaction request
         # The create account api call must start with zero (0) so we
         # must create a transaction against the account to set initial balance
-        req = createTransaction(to_account_id=account_id, to_bank_id=bank_id, 
+        req = createTransaction(from_account_id=account_id, from_bank_id=bank_id,
+                        to_account_id=account_id, to_bank_id=bank_id, 
                         currency=balance_currency, amount=balance_amount, 
                         description="Opening balance",
                         challenge_type="SANDBOX_TAN")
