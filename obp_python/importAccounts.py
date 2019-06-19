@@ -14,7 +14,7 @@ def importAccounts(spreadsheet=None, sheet_name=None):
 
   Requires roles/entitlement(s)
   - CanCreateAccount
-  - canCreateAnyTransactionRequest (for setting initial balance)
+  - CanCreateAnyTransactionRequest (for setting initial balance)
   """
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
