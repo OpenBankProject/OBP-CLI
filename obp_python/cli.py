@@ -20,6 +20,7 @@ from .addFx import addFx
 from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
+from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
@@ -275,6 +276,18 @@ def addcustomer(bank_id, username, customer_number, legal_name, title,
                   kyc_status=kyc_status, last_ok_date=last_ok_date, title=title,
                   branch_id=branch_id, name_suffix=name_suffix)
 
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🔗 Link user to a customer")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--user-id', required=True, prompt=True)
+@click.option('--customer-id', required=True, prompt=True)
+def LinkUserToCustomer(bank_id, user_id, customer_id):
+  req = linkUserToCustomer(bank_id=bank_id, user_id=user_id, 
+                          customer_id=customer_id)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
