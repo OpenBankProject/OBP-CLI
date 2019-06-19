@@ -32,7 +32,6 @@ def getCustomerIdByCustomerNumber(customer_number=None, bank_id=None):
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/banks/{bank_id}/customers/customer-number'.format(bank_id=bank_id,
             customer_number=customer_number)
   req = requests.post(url, headers=headers, json=payload)
-  import pdb;pdb.set_trace()
   #BUG obp api returns 201 for this api call but should be 200
   # https://github.com/OpenBankProject/OBP-API/issues/1326
   if req.status_code != 201: 
