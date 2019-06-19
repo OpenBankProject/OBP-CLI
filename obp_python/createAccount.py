@@ -27,5 +27,8 @@ def createAccount(bankid=None, userid=None, currency=None, label=None,
   headers = {'Content-Type': 'application/json',
             'Authorization': authorization}
   req = requests.put(url, headers=headers, json=payload)
+  if req.status_code == 403:
+    print(req.text)
+    exit(-1)
 
   return req
