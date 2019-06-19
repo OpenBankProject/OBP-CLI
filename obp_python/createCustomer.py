@@ -54,4 +54,9 @@ def createCustomer(username=None, bank_id=None, customer_number=None,
             'Authorization': authorization}
   req = requests.post(url, headers=headers, json=payload)
 
+  if req.status_code == 403:
+  print(req.text)
+  exit(-1)
+
+
   return req
