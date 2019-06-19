@@ -34,5 +34,7 @@ def hasEntitlements(entitlements_required=[]):
     print("ERROR: Missing entitlements")
     print("To add an entitlement try:")
     print("obp addrole --role-name {role}".format(role=missing[0]))
+    print("Alternatively...")
+    print("obp addrole --role-name {role} --bank-id your-bank-id".format(role=missing[0]))
 
   return fail, missing
