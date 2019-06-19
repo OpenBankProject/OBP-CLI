@@ -18,6 +18,7 @@ from .getUserId import getUserId
 from .addUser import addUser
 from .addFx import addFx
 from .createAccount import createAccount
+from .createBank import createBank
 from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
@@ -183,6 +184,30 @@ def addaccount(userid, accountid, label, type, currency, branchid, bankid):
   req = createAccount(userid=userid, label=label, type=type,
                       currency=currency, bankid=bankid, 
                       branchid=branchid, accountid=accountid)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🏦 Add a bank")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--full-name', default="uk", prompt=True)
+@click.option('--short-name', default="uk", prompt=True)
+@click.option('--logo-url', default="https://static.openbankproject.com/images/sandbox/bank_x.png", prompt=True)
+@click.option('--website-url', default="https://www.example.com", prompt=True)
+@click.option('--swift_bic', default="IIIGGB22", prompt=True)
+@click.option('--national-identifier', default="UK97ZZZ1234567890", prompt=True)
+@click.option('--bank-routing-scheme', default="BIC", prompt=True)
+@click.option('--bank-routing-address', default="OKOYFIHH", prompt=True)
+def addbank(bank_id, full_name, short_name, logo_url, website_url, swift_bic, 
+              national_identifier, bank_routing_scheme, bank_routing_address):
+
+  req = createBank(bank_id=bank_id, full_name=full_name, short_name=short_name,
+                    logo_url=logo_url, website_url=website_url,
+                    swift_bic=swift_bic, 
+                    national_identifier=national_identifier,
+                    bank_routing_scheme=bank_routing_scheme,
+                    bank_routing_address=bank_routing_address)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
