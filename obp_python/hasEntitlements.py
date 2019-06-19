@@ -9,6 +9,8 @@ def hasEntitlements(entitlements_required=[]):
   Returns: 
     - fail (bolean)
     - missing (list) of missing entitlements
+
+  TODO Check if bank_id required
   """
 
   if len(entitlements_required) is 0:
@@ -30,5 +32,7 @@ def hasEntitlements(entitlements_required=[]):
     fail = False
   else:
     print("ERROR: Missing entitlements")
+    print("To add an entitlement try:")
+    print("obp addrole --role-name {role}".format(role=missing[0]))
 
   return fail, missing
