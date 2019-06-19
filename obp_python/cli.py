@@ -19,6 +19,7 @@ from .addUser import addUser
 from .addFx import addFx
 from .createAccount import createAccount
 from .createBank import createBank
+from .createCustomer import createCustomer
 from .getBanks import getBanks
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
@@ -208,6 +209,61 @@ def addbank(bank_id, full_name, short_name, logo_url, website_url, swift_bic,
                     national_identifier=national_identifier,
                     bank_routing_scheme=bank_routing_scheme,
                     bank_routing_address=bank_routing_address)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🧙 Add a customer")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--username', default="fred", prompt=True)
+@click.option('--customer-number', default=1754311298, prompt=True)
+@click.option('--legal-name', default="Smith", prompt=True)
+@click.option('--title', default="", prompt=True, help="Dr./Mz/Mrs")
+@click.option('--mobile-number', default="+44123456", prompt=True)
+@click.option('--email', default="fred@example.com", prompt=True)
+@click.option('--face-image-url', default="https://placeimg.com/100/100/people", prompt=True)
+@click.option('--face-image-date', default="2017-09-19T00:00:00Z", prompt=True)
+@click.option('--birthdate', default="1990-09-19T00:00:00Z", prompt=True)
+@click.option('--relationship-status', default="single", prompt=True)
+@click.option('--number-of-dependants', default=0, prompt=True)
+@click.option('--dob-dependants', default="2018-09-19T00:00:00Z", prompt=True, help="Dependants date of birth")
+@click.option('--credit-rating-rating', default="OBP", prompt=True)
+@click.option('--credit-rating-source', default="OBP", prompt=True)
+@click.option('--credit-rating-currency', default="EUR", prompt=True)
+@click.option('--credit-limit-currency', default="EUR", prompt=True)
+@click.option('--credit-limit-amount', default=0, prompt=True)
+@click.option('--highest-education-attained', default="Degree")
+@click.option('--employment-status', default="employed", prompt=True)
+@click.option('--kyc-status', default=True, prompt=True, help="Know your customer (kyc) status")
+@click.option('--last-ok-date', default="2017-09-19T00:00:00Z", prompt=True)
+@click.option('--branch-id', default=1234, prompt=True)
+@click.option('--name-suffix', default="", prompt=True)
+def addcustomer(bank_id, username, customer_number, legal_name, title,
+              mobile_number, email, face_image_url, face_image_date,
+              birthdate, relationship_status, number_of_dependants, 
+              dob_dependants, credit_rating_rating, credit_rating_source,
+              credit_rating_currency, credit_limit_currency, credit_limit_amount, 
+              highest_education_attained, employment_status, kyc_status,
+              last_ok_date, branch_id, name_suffix):
+
+  req = createCustomer(username=username, bank_id=bank_id, 
+                  customer_number=customer_number,
+                  legal_name=legal_name, mobile_phone_number=mobile_number, 
+                  email=email, face_image_url=face_image_url, 
+                  face_image_date=face_image_date, date_of_birth=birthdate,
+                  relationship_status=relationship_status, 
+                  dependants=number_of_dependants,
+                  dob_of_dependants=dob_dependants, 
+                  credit_rating_rating=credit_rating_rating,
+                  credit_rating_source=credit_rating_source, 
+                  credit_limit_currency=credit_limit_currency,
+                  credit_limit_amount=credit_limit_amount, 
+                  highest_education_attained=highest_education_attained,
+                  employment_status=employment_status, 
+                  kyc_status=kyc_status, last_ok_date=last_ok_date, title=title,
+                  branch_id=branch_id, name_suffix=name_suffix)
+
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
