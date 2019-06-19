@@ -3,6 +3,7 @@ import os
 import json
 from .init import get_config
 from .getCustomerIdByCustomerNumber import getCustomerIdByCustomerNumber
+from .hasEntitlements import hasEntitlements
 
 def createCard(bank_id=None, card_number=None, 
                   card_type=None, name_on_card=None, issue_number=None, 
@@ -18,6 +19,15 @@ def createCard(bank_id=None, card_number=None,
   Requires role: CanCreateCardsForBank
   To add entitlements with cli: `obp addrole --role-name=<role-name>`
   """
+
+  # Validate entitlements
+  requiredEntitlements = ['CanCreateCardsForBank', 'CanGetCustomer']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
+
   payload = {
     "card_number": card_number,
     "card_type": card_type,  

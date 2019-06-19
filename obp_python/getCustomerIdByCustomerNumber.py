@@ -2,6 +2,7 @@ import requests
 import os
 import json
 from .init import get_config
+from .hasEntitlements import hasEntitlements
 
 def getCustomerIdByCustomerNumber(customer_number=None, bank_id=None):
   """
@@ -13,6 +14,14 @@ def getCustomerIdByCustomerNumber(customer_number=None, bank_id=None):
 
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
+
+  # Validate entitlements
+  requiredEntitlements = ['CanGetCustomer']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
 
   authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
   headers = {'Content-Type': 'application/json',
