@@ -4,6 +4,7 @@ from pyexcel_ods import get_data
 import sys, traceback
 from .createCard import createCard
 from .getCustomerIdByCustomerNumber import getCustomerIdByCustomerNumber
+from .hasEntitlements import hasEntitlements
 
 def importCards(spreadsheet=None, sheet_name=None):
   """
@@ -12,6 +13,14 @@ def importCards(spreadsheet=None, sheet_name=None):
   Required roles: CanCreateCardsForBank
   e.g. obp addrole --role-name CanCreateCardsForBank --bank-id gh.29.uk.x
   """
+
+  # Validate entitlements
+  requiredEntitlements = ['CanCreateCardsForBank']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
