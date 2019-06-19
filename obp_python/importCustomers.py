@@ -6,12 +6,24 @@ from .createCustomer import createCustomer
 from .getUserIdByUsername import getUserIdByUsername
 from .linkUserToCustomer import linkUserToCustomer
 from .updateCustomerNumber import updateCustomerNumber
+from .hasEntitlements import hasEntitlements
 
 
 def importCustomers(spreadsheet=None, sheet_name=None):
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
+
+  # Validate entitlements
+  requiredEntitlements = ['CanCreateCustomerAtAnyBank', 
+                          'CanCreateUserCustomerLinkAtAnyBank']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
+
+
   '''
   Loading location data from ods spreadsheet
   '''
