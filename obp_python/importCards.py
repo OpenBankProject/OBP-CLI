@@ -10,12 +10,12 @@ def importCards(spreadsheet=None, sheet_name=None):
   """
   Import cards into Open Bank Project
 
-  Required roles: CanCreateCardsForBank
+  Required roles: CanCreateCardsForBank, CanGetCustomer
   e.g. obp addrole --role-name CanCreateCardsForBank --bank-id gh.29.uk.x
   """
 
   # Validate entitlements
-  requiredEntitlements = ['CanCreateCardsForBank']
+  requiredEntitlements = ['CanCreateCardsForBank', 'CanGetCustomer']
   fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
 
   if fail is True:
