@@ -8,6 +8,7 @@ import re
 from .createAccount import createAccount
 from .createTransaction import createTransaction
 from .getUserIdByUsername import getUserIdByUsername
+from .hasEntitlements import hasEntitlements
 
 def importAccounts(spreadsheet=None, sheet_name=None):
   """
@@ -20,6 +21,16 @@ def importAccounts(spreadsheet=None, sheet_name=None):
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
+
+  # Validate entitlements
+  requiredEntitlements = ['CanCreateAccount', 'CanCreateAnyTransactionRequest',
+                          'CanGetAnyUser']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
+    
   '''
   Loading location data from ods spreadsheet
   '''
