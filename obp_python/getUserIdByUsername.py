@@ -13,4 +13,7 @@ def getUserIdByUsername(username=None):
             'Authorization': authorization}
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/users/username/{username}'.format(username=username)
   req = requests.get(url, headers=headers)
+  if req.status_code == 403:
+    print(req.text)
+    exit(-1)
   return req

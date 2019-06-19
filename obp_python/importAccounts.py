@@ -7,6 +7,7 @@ import sys, traceback
 import re
 from .createAccount import createAccount
 from .createTransaction import createTransaction
+from .getUserIdByUsername import getUserIdByUsername
 
 def importAccounts(spreadsheet=None, sheet_name=None):
   """
@@ -48,20 +49,17 @@ def importAccounts(spreadsheet=None, sheet_name=None):
       branch_id = get_value(7, account)
       account_routing_scheme = get_value(8, account)
       account_routing_address = get_value(9, account)
-      # Get user id based on usernamse (NOTE: User must exist in order for 
+      # Get user id based on username (NOTE: User must exist in order for 
       # import to succeed). Also, the user making the request must have the 
       # "CanGetAnyUser" entitlement. If you are a super user, you can use
       # `obp addrole --role-name CanGetAnyUser` to grant this entitlement to
       # yourself. 
-      authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
-      headers = {'Content-Type': 'application/json',
-                'Authorization': authorization}
-      url = get_config('OBP_API_HOST') + '/obp/v3.1.0/users/username/{USERNAME}'.format(USERNAME=username)
-      response = requests.get(url, headers=headers)
-      if response.status_code is 200:
-        user_id = response.json()['user_id']
+      req = getUserIdByUsername(username=username)
+      if req.status_code is 200:
+        user_id = req.json()['user_id']
       else:
-        user_id = 'user not found'
+        print("ERROR: Could not determine user_id from username")
+        exit(-1)
 
       #Post accounts to api
       response = createAccount(bankid=bank_id, userid=user_id, currency=balance_currency, label=label,
