@@ -16,7 +16,8 @@ def importCustomers(spreadsheet=None, sheet_name=None):
 
   # Validate entitlements
   requiredEntitlements = ['CanCreateCustomerAtAnyBank', 
-                          'CanCreateUserCustomerLinkAtAnyBank']
+                          'CanCreateUserCustomerLinkAtAnyBank',
+                          'CanUpdateCustomerNumber']
   fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
 
   if fail is True:
