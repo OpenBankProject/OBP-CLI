@@ -143,7 +143,7 @@ def getbanks():
     exit(req.text)
 
 @cli.command(help="🏦 Get list of cards at bank")
-@click.option('--bank-id', prompt=True)
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
 def getcards(bank_id):
   req = getCards(bank_id=bank_id)
   if req.status_code == 200:
