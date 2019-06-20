@@ -85,30 +85,7 @@ def importCards(spreadsheet=None, sheet_name=None):
                   customer_id=customer_id)
 
       print(response.text)
-      # Update card number to the number specified in the spreadsheet
-      # We need this because the createCard api call does not store the
-      # card number upon initial creation TODO change this.
-      if response.status_code is 201 or response.status_code is 200:
-        card_id = response.json()['card_id']
-        updateCardNumber(bank_id=bank_id, card_id=card_id, 
-                              card_number=card_number)
-  
-      # Link card to 'username' if username is presnt in sheet
-      if response.status_code is 201 or response.status_code is 200 \
-        and bool(username) is not False:
-        card_id = response.json()['card_id']
-        req = getUserIdByUsername(username=username)
-        if req.status_code is 200:
-          user_id = req.json()['user_id']
-          req = linkUserToCard(bank_id=bank_id, user_id=user_id,
-                                    card_id=card_id)
-          if req.status_code == 400:
-            print(req.text)
-            exit(-1)
-          if req.status_code is not 201:
-            print("WARNING: could not create link between User and Card")
-
-      if response.status_code is 200:
+      if response.status_code == 400 and "Card already exists" in response.text:
         print("WARNING: card aleady exists")
         print(response.text)
         sucessCount = sucessCount + 1
