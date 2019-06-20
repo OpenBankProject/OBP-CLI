@@ -26,6 +26,7 @@ from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
 from .getCustomers import getCustomers
 from .deleteBranches import deleteBranches
+from .deleteCardById import deleteCardById
 from .getUserIdByUsername import getUserIdByUsername
 import pprint
 
@@ -328,6 +329,16 @@ def addfx(bank_id, from_currency, to_currency, conversion_value,
 @click.option('--bank-id', required=True)
 def deletebranches(bank_id):
   req = deleteBranches(bank_id)
+
+@cli.command(help="⚠️  💳 Delete card by id")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-id', prompt=True)
+def deletecardbyid(bank_id, card_id):
+  req = deleteCardById(bank_id=bank_id, card_id=card_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
 
 @cli.command(help="🚜 Import branches from spreadsheet template")
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
