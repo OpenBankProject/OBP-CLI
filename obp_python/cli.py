@@ -22,6 +22,7 @@ from .createBank import createBank
 from .createCustomer import createCustomer
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
+from .getCards import getCards
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
 from .getCustomers import getCustomers
@@ -134,6 +135,16 @@ def getuseridbyusername(username):
 @cli.command(help="🏦 Get list of banks")
 def getbanks():
   req = getBanks()
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="🏦 Get list of cards at bank")
+@click.option('--bank-id', prompt=True)
+def getcards(bank_id):
+  req = getCards(bank_id=bank_id)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
