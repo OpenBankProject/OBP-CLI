@@ -13,6 +13,7 @@ from .importTransactions import importTransactions
 from .importUsers import importUsers
 from .importCustomers import importCustomers
 from .importCards import importCards
+from .importCardAttributes import importCardAttributes
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
@@ -376,6 +377,11 @@ def importtransactions(spreadsheet):
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
 def importcustomers(spreadsheet):
   req = importCustomers(spreadsheet)
+
+@cli.command(help="🚜 Import card attributes from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importcardattribues(spreadsheet):
+  req = importCardAttributes(spreadsheet)
 
 @cli.command(help="🚜 Import cards from spreadsheet template")
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
