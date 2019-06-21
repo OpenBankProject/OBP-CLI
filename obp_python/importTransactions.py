@@ -2,21 +2,23 @@ import requests
 from .init import get_config
 from pyexcel_ods import get_data
 import sys, traceback
-from .createTransaction import createTransaction
+from .hasEntitlements import hasEntitlements
+from .createHistoricalTransaction import createHistoricalTransaction
 
 def importTransactions(spreadsheet=None, sheet_name=None):
   """
   Import transactions from a spreadsheet template
-
-  Creates and auto-accepts transaction reqests against 
-  the account(s) specified in the template.
   
-  If importing transactions against accounts which are not
-  owned by your account, then you require the permission: 
-  canCreateAnyTransactionRequest
-
-  e.g. obp addrole --role-name CanCreateAnyTransactionRequest --bank-id gh.29.uk.x
+  e.g. obp addrole --role-name CanCreateHistoricalTransaction --bank-id gh.29.uk.x
   """
+
+  # Validate entitlements
+  requiredEntitlements = ['CanCreateHistoricalTransaction']
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
   
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
@@ -45,23 +47,21 @@ def importTransactions(spreadsheet=None, sheet_name=None):
       amount = get_value(5, transaction)
       description = get_value(6, transaction)
       challenge_type = get_value(7, transaction)
+      posted = get_value(8, transaction)
+      completed = get_value(9, transaction)
 
       #Post transaction to api
-      response = createTransaction(from_account_id=from_account_id, 
+      response = createHistoricalTransaction(from_account_id=from_account_id, 
                                   from_bank_id=from_bank_id, 
                                   to_account_id=to_account_id, 
                                   to_bank_id=to_bank_id, 
                                   currency=currency, amount=amount, 
                                   description=description, 
-                                  challenge_type=challenge_type)
+                                  posted=posted,
+                                  completed=completed)
 
       print(response.text)
-      if response.status_code is 201 or response.status_code is 202:
-        # 201 means transaction was accepted (less than 1000 by default always
-        # accepted
-        # 202 means he request has been accepted for processing, and an 
-        # automated attempt will be made to accept the request. 
-        # TODO surface the sucess of a 202 response to the cli output
+      if response.status_code is 201: #Created
         print(response.text)
         sucessCount = sucessCount + 1
       else:
