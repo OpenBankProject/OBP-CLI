@@ -13,6 +13,7 @@ from .importTransactions import importTransactions
 from .importUsers import importUsers
 from .importCustomers import importCustomers
 from .importCards import importCards
+from .getCardIdByCardNumber import getCardIdByCardNumber
 from .importCardAttributes import importCardAttributes
 from .getUserId import getUserId
 from .addRole import addRole
@@ -25,6 +26,7 @@ from .createCustomer import createCustomer
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getCards import getCards
+from .getCardById import getCardById
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
 from .getAccountTransactions import getAccountTransactions
@@ -144,10 +146,32 @@ def getbanks():
   else:
     exit(req.text)
 
-@cli.command(help="🏦 Get list of cards at bank")
+@cli.command(help="💳 Get list of cards at bank")
 @click.option('--bank-id', prompt=True, default="gh.29.uk.x")
 def getcards(bank_id):
   req = getCards(bank_id=bank_id)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="💳 Get card by card number")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-number', prompt=True, default="gh.29.uk.x")
+def getcardbynumber(bank_id,card_number):
+  req = getCardByCardNumber(bank_id=bank_id, card_number=card_number)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="💳 Get card by id")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-id', prompt=True)
+def getcardbyid(bank_id, card_id):
+  req = getCardById(bank_id=bank_id, card_id=card_id)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
