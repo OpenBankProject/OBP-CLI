@@ -45,32 +45,36 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  addaccount           📁 Add a bank account
-  addbank              🏦 Add a bank
-  addcustomer          🧙 Add a customer
-  addfx                📉 Add exchange rate (FX)
-  addrole              🚧 Add a role for current user
-  adduser              📝 Add a user
-  deletebranches       ⚠️ 🏦 Delete all branches
-  deletecardbyid       ⚠️ 💳 Delete card by id
-  getaccountbyid       📁 Get account by id (includes balance)
-  getaccountsheld      📁 Get list of accounts held
-  getauth              🔑 Get your DirectLogin token
-  getbanks             🏦 Get list of banks
-  getcards             🏦 Get list of cards at bank
-  getcustomers         👥 Get list of customers
-  getuser              😃 Get your user info
-  getuserid            📋 Get your user id
-  getuseridbyusername  📋 Get user id by username
-  importaccounts       🚜 Import accounts from spreadsheet template
-  importbranches       🚜 Import branches from spreadsheet template
-  importcards          🚜 Import cards from spreadsheet template
-  importcustomers      🚜 Import customers from spreadsheet template
-  importtransactions   🚜 Import transactions from spreadsheet template
-  importusers          🚜 Import users from spreadsheet template
-  init                 💡 Initalize connection to your Open Bank Project...
-  linkusertocustomer   🔗 Link user to a customer
-  sandboximport        🚜 Bulk import sandbox data from json input
+  addaccount              📁 Add a bank account
+  addbank                 🏦 Add a bank
+  addcustomer             🧙 Add a customer
+  addfx                   📉 Add exchange rate (FX)
+  addrole                 🚧 Add a role for current user
+  adduser                 📝 Add a user
+  deletebranches          ⚠️ 🏦 Delete all branches
+  deletecardbyid          ⚠️ 💳 Delete card by id
+  getaccountbyid          📁 Get account by id (includes balance)
+  getaccountsheld         📁 Get list of accounts held
+  getaccounttransactions  📁 Get transactions for an account
+  getauth                 🔑 Get your DirectLogin token
+  getbanks                🏦 Get list of banks
+  getcardbyid             💳 Get card by id
+  getcardbynumber         💳 Get card by card number
+  getcards                💳 Get list of cards at bank
+  getcustomers            👥 Get list of customers
+  getuser                 😃 Get your user info
+  getuserid               📋 Get your user id
+  getuseridbyusername     📋 Get user id by username
+  importaccounts          🚜 Import accounts from spreadsheet template
+  importbranches          🚜 Import branches from spreadsheet template
+  importcardattribues     🚜 Import card attributes from spreadsheet template
+  importcards             🚜 Import cards from spreadsheet template
+  importcustomers         🚜 Import customers from spreadsheet template
+  importtransactions      🚜 Import transactions from spreadsheet template
+  importusers             🚜 Import users from spreadsheet template
+  init                    💡 Initalize connection to your Open Bank Project...
+  linkusertocustomer      🔗 Link user to a customer
+  sandboximport           🚜 Bulk import sandbox data from json input
 ```
 
 ## Examples
