@@ -27,6 +27,7 @@ from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getCards import getCards
 from .getCardById import getCardById
+from .getCardByCardNumber import getCardByCardNumber
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
 from .getAccountTransactions import getAccountTransactions
@@ -158,7 +159,7 @@ def getcards(bank_id):
 
 @cli.command(help="💳 Get card by card number")
 @click.option('--bank-id', prompt=True, default="gh.29.uk.x")
-@click.option('--card-number', prompt=True, default="gh.29.uk.x")
+@click.option('--card-number', prompt=True, help="Use `obp getcards` to find cards")
 def getcardbynumber(bank_id,card_number):
   req = getCardByCardNumber(bank_id=bank_id, card_number=card_number)
   if req.status_code == 200:
