@@ -30,8 +30,8 @@ def createHistoricalTransaction(from_account_id=None, from_bank_id=None,
               "currency": currency, 
               "amount": amount}, 
             "description": description, 
-            "posted": posted,
-            "completed": completed,
+            "posted": str(posted),
+            "completed": str(completed),
             "transaction_request_type" : "SANDBOX_TAN",
             "charge_policy": "SHARED"
             }
