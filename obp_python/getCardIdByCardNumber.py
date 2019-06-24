@@ -33,7 +33,7 @@ def getCardIdByCardNumber(bank_id=None, card_number=None):
   elif req.status_code == 200:
     cards = req.json()['cards']
     # look for card number in cards list & return it
-    findCard = [ card for card in cards if card['card_number'] == '364435172576215']
+    findCard = [ card for card in cards if card['card_number'] == card_number]
     if len(findCard) == 1:
       return findCard[0]['card_id']
     else:
