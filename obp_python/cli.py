@@ -27,6 +27,7 @@ from .getBanks import getBanks
 from .getCards import getCards
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
+from .getAccountTransactions import getAccountTransactions
 from .getCustomers import getCustomers
 from .deleteBranches import deleteBranches
 from .deleteCardById import deleteCardById
@@ -168,6 +169,19 @@ def getaccountsheld(bank_id):
 @click.option('--account-id', prompt=True)
 def getaccountbyid(bank_id, account_id):
   req = getAccountById(bank_id=bank_id, account_id=account_id)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="📁 Get transactions for an account")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--account-id', prompt=True, help="Use `obp getaccountsheld` to know account ids")
+@click.option('--view-name', prompt=True, default="owner")
+def getaccounttransactions(bank_id, account_id, view_name):
+  req = getAccountTransactions(bank_id=bank_id, account_id=account_id, 
+                              view_name=view_name)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
