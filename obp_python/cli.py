@@ -23,6 +23,7 @@ from .addFx import addFx
 from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
+from .createConsent import createConsent
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getCards import getCards
@@ -355,6 +356,24 @@ def addrole(role_name, bank_id=None, user_id=None):
     req = addRole(role=role_name, user_id=user_id)
   else:
     req = addRole(role=role_name, bank_id=bank_id, user_id=user_id)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Add a consent")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--consent_type', default="email", prompt=True, help="email|sms")
+@click.option('--consent_for', prompt=True, default="ALL_MY_ACCOUNTS")
+@click.option('--view', prompt=True, default="owner")
+@click.option('--email', prompt=True, default="")
+@click.option('--phone_number', prompt=True, default="")
+def createconsent(bank_id, consent_type, consent_for,
+                  view, email, phone_number):
+
+  req = createConsent(bank_id=bank_id, consent_type=consent_type, 
+                  consent_for=consent_for, view=view, email=email, 
+                  phone_number=phone_number)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
