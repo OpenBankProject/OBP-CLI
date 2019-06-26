@@ -24,6 +24,7 @@ from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
 from .createConsent import createConsent
+from .revokeConsent import revokeConsent
 from .getConsents import getConsents
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
@@ -385,6 +386,18 @@ def createconsent(bank_id, consent_type, consent_for,
 def getconsents(bank_id):
 
   req = getConsents(bank_id=bank_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Revoke consent")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--consent-id', prompt=True)
+def revokeconsent(bank_id, consent_id):
+
+  req = revokeConsent(bank_id=bank_id, consent_id=consent_id)
+  import pdb;pdb.set_trace()
   if req.status_code == 200:
     click.echo(req.text)
   else:
