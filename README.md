@@ -51,6 +51,8 @@ Commands:
   addfx                   📉 Add exchange rate (FX)
   addrole                 🚧 Add a role for current user
   adduser                 📝 Add a user
+  answerconsent           🚧 Answer consent
+  createconsent           🚧 Add a consent
   deletebranches          ⚠️ 🏦 Delete all branches
   deletecardbyid          ⚠️ 💳 Delete card by id
   getaccountbyid          📁 Get account by id (includes balance)
@@ -61,6 +63,7 @@ Commands:
   getcardbyid             💳 Get card by id
   getcardbynumber         💳 Get card by card number
   getcards                💳 Get list of cards at bank
+  getconsents             🚧 Get consents
   getcustomers            👥 Get list of customers
   getuser                 😃 Get your user info
   getuserid               📋 Get your user id
@@ -74,6 +77,7 @@ Commands:
   importusers             🚜 Import users from spreadsheet template
   init                    💡 Initalize connection to your Open Bank Project...
   linkusertocustomer      🔗 Link user to a customer
+  revokeconsent           🚧 Revoke consent
   sandboximport           🚜 Bulk import sandbox data from json input
 ```
 
