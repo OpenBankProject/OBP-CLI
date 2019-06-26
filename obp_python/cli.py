@@ -26,7 +26,9 @@ from .createCustomer import createCustomer
 from .createConsent import createConsent
 from .revokeConsent import revokeConsent
 from .answerConsent import answerConsent
+from .revokeConsent import revokeConsent
 from .getConsents import getConsents
+from .getConsentStatus import getConsentStatus
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getCards import getCards
@@ -410,6 +412,16 @@ def revokeconsent(bank_id, consent_id):
 def answerconsent(bank_id, consent_id, answer):
 
   req = answerConsent(bank_id=bank_id, consent_id=consent_id, answer=answer)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Get consent status- with certificate")
+@click.option('--consent-id', prompt=True)
+@click.option('--cert', type=click.File('r'), required=True, help="Certificate file")
+def getconsentstatus(consent_id, cert):
+  req = getConsentStatus(consent_id=consent_id, certificate=cert)
   if req.status_code == 200:
     click.echo(req.text)
   else:
