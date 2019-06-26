@@ -397,7 +397,6 @@ def getconsents(bank_id):
 def revokeconsent(bank_id, consent_id):
 
   req = revokeConsent(bank_id=bank_id, consent_id=consent_id)
-  import pdb;pdb.set_trace()
   if req.status_code == 200:
     click.echo(req.text)
   else:
