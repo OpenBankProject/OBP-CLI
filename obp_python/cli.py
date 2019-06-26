@@ -24,6 +24,7 @@ from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
 from .createConsent import createConsent
+from .getConsents import getConsents
 from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
 from .getCards import getCards
@@ -375,6 +376,16 @@ def createconsent(bank_id, consent_type, consent_for,
                   consent_for=consent_for, view=view, email=email, 
                   phone_number=phone_number)
   if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Get consents")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+def getconsents(bank_id):
+
+  req = getConsents(bank_id=bank_id)
+  if req.status_code == 200:
     click.echo(req.text)
   else:
     exit(req.text)
