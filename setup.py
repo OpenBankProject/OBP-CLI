@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="obp_python",
-    version="0.203",
+    version="0.204",
     author="",
     author_email="",
     description="Beta Open Bank Project Python Utilities",
