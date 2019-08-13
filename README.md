@@ -51,6 +51,7 @@ Commands:
   addfx                   📉 Add exchange rate (FX)
   addrole                 🚧 Add a role for current user
   adduser                 📝 Add a user
+  addview                 🧐 Add a view
   answerconsent           🚧 Answer consent
   createconsent           🚧 Add a consent
   deletebranches          ⚠️ 🏦 Delete all branches
@@ -64,6 +65,7 @@ Commands:
   getcardbynumber         💳 Get card by card number
   getcards                💳 Get list of cards at bank
   getconsents             🚧 Get consents
+  getconsentstatus        🚧 Get consent status- with certificate
   getcustomers            👥 Get list of customers
   getuser                 😃 Get your user info
   getuserid               📋 Get your user id
