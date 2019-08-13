@@ -24,6 +24,7 @@ from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
 from .createConsent import createConsent
+from .createView import createView
 from .revokeConsent import revokeConsent
 from .answerConsent import answerConsent
 from .revokeConsent import revokeConsent
@@ -335,6 +336,28 @@ def addcustomer(bank_id, username, customer_number, legal_name, title,
                   kyc_status=kyc_status, last_ok_date=last_ok_date, title=title,
                   branch_id=branch_id, name_suffix=name_suffix)
 
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🧐 Add a view")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--account-id', prompt=True)
+@click.option('--name', prompt=True, help="Example: Auditor")
+@click.option('--description', prompt=True)
+@click.option('--metadata-view', prompt=True, default="_test")
+@click.option('--which-alias-to-use', prompt=True, default="")
+@click.option('--is-public', type=bool, prompt=True, default=False)
+@click.option('--allowed-actions', prompt=True, multiple=True)
+def addview(bank_id, account_id, name, description, metadata_view, 
+            which_alias_to_use, is_public, allowed_actions):
+
+  req = createView(bank_id=bank_id, account_id=account_id, name=name, 
+                  description=description, 
+                  metadata_view=metadata_view, 
+                  which_alias_to_use=which_alias_to_use,
+                  is_public=is_public, allowed_actions=allowed_actions)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
