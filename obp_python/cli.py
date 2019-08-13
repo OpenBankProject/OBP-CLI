@@ -24,7 +24,7 @@ from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
 from .createConsent import createConsent
-from .createView import createView
+from .createView import createView, possible_actions
 from .revokeConsent import revokeConsent
 from .answerConsent import answerConsent
 from .revokeConsent import revokeConsent
@@ -349,10 +349,9 @@ def addcustomer(bank_id, username, customer_number, legal_name, title,
 @click.option('--metadata-view', prompt=True, default="_test")
 @click.option('--which-alias-to-use', prompt=True, default="")
 @click.option('--is-public', type=bool, prompt=True, default=False)
-@click.option('--allowed-actions', prompt=True, multiple=True)
+@click.option('--allowed-actions', prompt=True, help=possible_actions)
 def addview(bank_id, account_id, name, description, metadata_view, 
             which_alias_to_use, is_public, allowed_actions):
-
   req = createView(bank_id=bank_id, account_id=account_id, name=name, 
                   description=description, 
                   metadata_view=metadata_view, 
