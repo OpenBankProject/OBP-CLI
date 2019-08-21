@@ -70,6 +70,8 @@ Commands:
   getuser                 😃 Get your user info
   getuserid               📋 Get your user id
   getuseridbyusername     📋 Get user id by username
+  getusers                😃 Get all users
+  getviews                🧐 Get views by provider
   importaccounts          🚜 Import accounts from spreadsheet template
   importbranches          🚜 Import branches from spreadsheet template
   importcardattribues     🚜 Import card attributes from spreadsheet template
