@@ -42,6 +42,7 @@ from .getCustomers import getCustomers
 from .deleteBranches import deleteBranches
 from .deleteCardById import deleteCardById
 from .getUserIdByUsername import getUserIdByUsername
+from .getUsers import getUsers
 import pprint
 
 @click.group()
@@ -125,6 +126,15 @@ def getuser():
     click.echo(req.text)
   else:
     exit(req.text)
+
+@cli.command(help="😃 Get all users")
+def getusers():
+  req = getUsers();
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.txt)
 
 @cli.command(help="📋 Get your user id")
 def getuserid():
