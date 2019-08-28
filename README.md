@@ -71,12 +71,12 @@ Commands:
   getuserid               📋 Get your user id
   getuseridbyusername     📋 Get user id by username
   getusers                😃 Get all users
-  getviews                🧐 Get views by provider
   importaccounts          🚜 Import accounts from spreadsheet template
   importbranches          🚜 Import branches from spreadsheet template
   importcardattribues     🚜 Import card attributes from spreadsheet template
   importcards             🚜 Import cards from spreadsheet template
   importcustomers         🚜 Import customers from spreadsheet template
+  importfx                🚜 📉 Load all foreign exchange rates (FX) to all...
   importtransactions      🚜 Import transactions from spreadsheet template
   importusers             🚜 Import users from spreadsheet template
   init                    💡 Initalize connection to your Open Bank Project...
