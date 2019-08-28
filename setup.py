@@ -21,7 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3",
-    install_requires=['click', 'requests', 'appdirs', 'dms2dec', 'pyexcel_ods'],
+    install_requires=['click', 'requests', 'appdirs', 'dms2dec', 'pyexcel_ods', 'fx2obp @ https://github.com/chrisjsimpson/fx2obp/archive/0.2.tar.gz'],
     entry_points='''
       [console_scripts]
       obp=obp_python:cli
