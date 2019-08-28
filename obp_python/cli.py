@@ -20,6 +20,7 @@ from .addRole import addRole
 from .getUserId import getUserId
 from .addUser import addUser
 from .addFx import addFx
+from .importFx import importFx
 from .createAccount import createAccount
 from .createBank import createBank
 from .createCustomer import createCustomer
@@ -475,6 +476,15 @@ def addfx(bank_id, from_currency, to_currency, conversion_value,
     click.echo(req.text)
   else:
     exit(req.text)
+
+@cli.command(help="🚜 📉 Load all foreign exchange rates (FX) to all banks")
+def importfx():
+  from time import sleep
+  print("This will take a while.")
+  print("First we're going to download all the latest exchange rates for you.")
+  print("Then we'll post them to your OBP instance") 
+  sleep(5)
+  importFx()
 
 @cli.command(help="⚠️  🏦 Delete all branches")
 @click.option('--bank-id', required=True)
