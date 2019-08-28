@@ -36,8 +36,8 @@ pip3 install --user obp-python
 pip3.6 install --user obp-python
 ```
 
-
 ## Usage
+
 ```
 Usage: obp [OPTIONS] COMMAND [ARGS]...
 
