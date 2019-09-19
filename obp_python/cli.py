@@ -11,15 +11,39 @@ from .importBranches import importBranches
 from .importAccounts import importAccounts
 from .importTransactions import importTransactions
 from .importUsers import importUsers
+from .importCustomers import importCustomers
+from .importCards import importCards
+from .getCardIdByCardNumber import getCardIdByCardNumber
+from .importCardAttributes import importCardAttributes
 from .getUserId import getUserId
 from .addRole import addRole
 from .getUserId import getUserId
 from .addUser import addUser
+from .addFx import addFx
+from .importFx import importFx
 from .createAccount import createAccount
+from .createBank import createBank
+from .createCustomer import createCustomer
+from .createConsent import createConsent
+from .createView import createView, possible_actions
+from .revokeConsent import revokeConsent
+from .answerConsent import answerConsent
+from .revokeConsent import revokeConsent
+from .getConsents import getConsents
+from .getConsentStatus import getConsentStatus
+from .linkUserToCustomer import linkUserToCustomer
 from .getBanks import getBanks
+from .getCards import getCards
+from .getCardById import getCardById
+from .getCardByCardNumber import getCardByCardNumber
 from .getAccountsHeld import getAccountsHeld
 from .getAccount import getAccountById
+from .getAccountTransactions import getAccountTransactions
+from .getCustomers import getCustomers
 from .deleteBranches import deleteBranches
+from .deleteCardById import deleteCardById
+from .getUserIdByUsername import getUserIdByUsername
+from .getUsers import getUsers
 import pprint
 
 @click.group()
@@ -104,6 +128,15 @@ def getuser():
   else:
     exit(req.text)
 
+@cli.command(help="😃 Get all users")
+def getusers():
+  req = getUsers();
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.txt)
+
 @cli.command(help="📋 Get your user id")
 def getuserid():
   req = getUserId()
@@ -113,9 +146,51 @@ def getuserid():
   else:
     exit(req.text)
 
+@cli.command(help="📋 Get user id by username")
+@click.option('--username', prompt=True)
+def getuseridbyusername(username):
+  req = getUserIdByUsername(username=username)
+  if req.status_code == 201 or req.status_code == 200:
+    user_id = json.loads(req.text)['user_id']
+    click.echo({'user_id': user_id})
+  else:
+    exit(req.text)
+
 @cli.command(help="🏦 Get list of banks")
 def getbanks():
   req = getBanks()
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="💳 Get list of cards at bank")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+def getcards(bank_id):
+  req = getCards(bank_id=bank_id)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="💳 Get card by card number")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-number', prompt=True, help="Use `obp getcards` to find cards")
+def getcardbynumber(bank_id,card_number):
+  req = getCardByCardNumber(bank_id=bank_id, card_number=card_number)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="💳 Get card by id")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-id', prompt=True)
+def getcardbyid(bank_id, card_id):
+  req = getCardById(bank_id=bank_id, card_id=card_id)
   if req.status_code == 200:
     pp = pprint.PrettyPrinter(width=41, compact=True)
     click.echo(pp.pprint(json.loads(req.text)))
@@ -143,6 +218,29 @@ def getaccountbyid(bank_id, account_id):
   else:
     exit(req.text)
 
+@cli.command(help="📁 Get transactions for an account")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--account-id', prompt=True, help="Use `obp getaccountsheld` to know account ids")
+@click.option('--view-name', prompt=True, default="owner")
+def getaccounttransactions(bank_id, account_id, view_name):
+  req = getAccountTransactions(bank_id=bank_id, account_id=account_id, 
+                              view_name=view_name)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
+@cli.command(help="👥 Get list of customers")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+def getcustomers(bank_id):
+  req = getCustomers(bank_id=bank_id)
+  if req.status_code == 200:
+    pp = pprint.PrettyPrinter(width=41, compact=True)
+    click.echo(pp.pprint(json.loads(req.text)))
+  else:
+    exit(req.text)
+
 @cli.command(help="📝 Add a user")
 @click.option('--username', prompt=True)
 @click.option('--email', prompt=True)
@@ -161,36 +259,247 @@ def adduser(username, email, password, firstname, lastname):
 @click.option('--userid', prompt=True, help="Use 'obp getuserid' to find it")
 @click.option('--accountid', default="abc123", prompt=True, help="Your choice of account id")
 @click.option('--label', default="Label", prompt=True)
-@click.option('--type', default="CURRENT", prompt=True, hide_input=True)
+@click.option('--type', default="CURRENT", prompt=True)
 @click.option('--currency', default="EUR", prompt=True)
-@click.option('--balance', default="0", prompt=True)
 @click.option('--branchid', default="1234", prompt=True)
 @click.option('--bankid', prompt=True, help="Try getbanks")
-def addaccount(userid, accountid, label, type, currency, balance,
-               branchid, bankid):
+def addaccount(userid, accountid, label, type, currency, branchid, bankid):
 
   req = createAccount(userid=userid, label=label, type=type,
-                      currency=currency, balance=balance,
-                      bankid=bankid, branchid=branchid,
-                      accountid=accountid)
+                      currency=currency, bankid=bankid, 
+                      branchid=branchid, accountid=accountid)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🏦 Add a bank")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--full-name', default="uk", prompt=True)
+@click.option('--short-name', default="uk", prompt=True)
+@click.option('--logo-url', default="https://static.openbankproject.com/images/sandbox/bank_x.png", prompt=True)
+@click.option('--website-url', default="https://www.example.com", prompt=True)
+@click.option('--swift_bic', default="IIIGGB22", prompt=True)
+@click.option('--national-identifier', default="UK97ZZZ1234567890", prompt=True)
+@click.option('--bank-routing-scheme', default="BIC", prompt=True)
+@click.option('--bank-routing-address', default="OKOYFIHH", prompt=True)
+def addbank(bank_id, full_name, short_name, logo_url, website_url, swift_bic, 
+              national_identifier, bank_routing_scheme, bank_routing_address):
+
+  req = createBank(bank_id=bank_id, full_name=full_name, short_name=short_name,
+                    logo_url=logo_url, website_url=website_url,
+                    swift_bic=swift_bic, 
+                    national_identifier=national_identifier,
+                    bank_routing_scheme=bank_routing_scheme,
+                    bank_routing_address=bank_routing_address)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🧙 Add a customer")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--username', default="fred", prompt=True)
+@click.option('--customer-number', default=1754311298, prompt=True)
+@click.option('--legal-name', default="Smith", prompt=True)
+@click.option('--title', default="", prompt=True, help="Dr./Mz/Mrs")
+@click.option('--mobile-number', default="+44123456", prompt=True)
+@click.option('--email', default="fred@example.com", prompt=True)
+@click.option('--face-image-url', default="https://placeimg.com/100/100/people", prompt=True)
+@click.option('--face-image-date', default="2017-09-19T00:00:00Z", prompt=True)
+@click.option('--birthdate', default="1990-09-19T00:00:00Z", prompt=True)
+@click.option('--relationship-status', default="single", prompt=True)
+@click.option('--number-of-dependants', default=0, prompt=True)
+@click.option('--dob-dependants', default="2018-09-19T00:00:00Z", prompt=True, help="Dependants date of birth")
+@click.option('--credit-rating-rating', default="OBP", prompt=True)
+@click.option('--credit-rating-source', default="OBP", prompt=True)
+@click.option('--credit-rating-currency', default="EUR", prompt=True)
+@click.option('--credit-limit-currency', default="EUR", prompt=True)
+@click.option('--credit-limit-amount', default=0, prompt=True)
+@click.option('--highest-education-attained', default="Degree")
+@click.option('--employment-status', default="employed", prompt=True)
+@click.option('--kyc-status', default=True, prompt=True, help="Know your customer (kyc) status")
+@click.option('--last-ok-date', default="2017-09-19T00:00:00Z", prompt=True)
+@click.option('--branch-id', default=1234, prompt=True)
+@click.option('--name-suffix', default="", prompt=True)
+def addcustomer(bank_id, username, customer_number, legal_name, title,
+              mobile_number, email, face_image_url, face_image_date,
+              birthdate, relationship_status, number_of_dependants, 
+              dob_dependants, credit_rating_rating, credit_rating_source,
+              credit_rating_currency, credit_limit_currency, credit_limit_amount, 
+              highest_education_attained, employment_status, kyc_status,
+              last_ok_date, branch_id, name_suffix):
+
+  req = createCustomer(username=username, bank_id=bank_id, 
+                  customer_number=customer_number,
+                  legal_name=legal_name, mobile_phone_number=mobile_number, 
+                  email=email, face_image_url=face_image_url, 
+                  face_image_date=face_image_date, date_of_birth=birthdate,
+                  relationship_status=relationship_status, 
+                  dependants=number_of_dependants,
+                  dob_of_dependants=dob_dependants, 
+                  credit_rating_rating=credit_rating_rating,
+                  credit_rating_source=credit_rating_source, 
+                  credit_limit_currency=credit_limit_currency,
+                  credit_limit_amount=credit_limit_amount, 
+                  highest_education_attained=highest_education_attained,
+                  employment_status=employment_status, 
+                  kyc_status=kyc_status, last_ok_date=last_ok_date, title=title,
+                  branch_id=branch_id, name_suffix=name_suffix)
+
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🧐 Add a view")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--account-id', prompt=True)
+@click.option('--name', prompt=True, help="Example: Auditor")
+@click.option('--description', prompt=True)
+@click.option('--metadata-view', prompt=True, default="_test")
+@click.option('--which-alias-to-use', prompt=True, default="")
+@click.option('--is-public', type=bool, prompt=True, default=False)
+@click.option('--allowed-actions', prompt=True, help=possible_actions)
+def addview(bank_id, account_id, name, description, metadata_view, 
+            which_alias_to_use, is_public, allowed_actions):
+  req = createView(bank_id=bank_id, account_id=account_id, name=name, 
+                  description=description, 
+                  metadata_view=metadata_view, 
+                  which_alias_to_use=which_alias_to_use,
+                  is_public=is_public, allowed_actions=allowed_actions)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🔗 Link user to a customer")
+@click.option('--bank-id', default="gh.29.uk.x", prompt=True)
+@click.option('--user-id', required=True, prompt=True)
+@click.option('--customer-id', required=True, prompt=True)
+def LinkUserToCustomer(bank_id, user_id, customer_id):
+  req = linkUserToCustomer(bank_id=bank_id, user_id=user_id, 
+                          customer_id=customer_id)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
     exit(req.text)
 
 @cli.command(help="🚧 Add a role for current user")
-@click.option('--role-name', required=True)
-def addrole(role_name):
-  req = addRole(role=role_name, require_bank_id=False)
+@click.option('--role-name', required=True, help="Name of the role/entitelment")
+@click.option('--bank-id', required=False, help="Some roles need a bank id")
+@click.option('--user-id', required=False, help="Add role to a differnt user")
+def addrole(role_name, bank_id=None, user_id=None):
+  if bank_id is None:
+    req = addRole(role=role_name, user_id=user_id)
+  else:
+    req = addRole(role=role_name, bank_id=bank_id, user_id=user_id)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
     exit(req.text)
 
+@cli.command(help="🚧 Add a consent")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--consent_type', default="email", prompt=True, help="email|sms")
+@click.option('--consent_for', prompt=True, default="ALL_MY_ACCOUNTS")
+@click.option('--view', prompt=True, default="owner")
+@click.option('--email', prompt=True, default="")
+@click.option('--phone_number', prompt=True, default="")
+def createconsent(bank_id, consent_type, consent_for,
+                  view, email, phone_number):
+
+  req = createConsent(bank_id=bank_id, consent_type=consent_type, 
+                  consent_for=consent_for, view=view, email=email, 
+                  phone_number=phone_number)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Get consents")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+def getconsents(bank_id):
+
+  req = getConsents(bank_id=bank_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Revoke consent")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--consent-id', prompt=True)
+def revokeconsent(bank_id, consent_id):
+
+  req = revokeConsent(bank_id=bank_id, consent_id=consent_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Answer consent")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--consent-id', prompt=True)
+@click.option('--answer', prompt=True)
+def answerconsent(bank_id, consent_id, answer):
+
+  req = answerConsent(bank_id=bank_id, consent_id=consent_id, answer=answer)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚧 Get consent status- with certificate")
+@click.option('--consent-id', prompt=True)
+@click.option('--cert', type=click.File('r'), required=True, help="Certificate file")
+def getconsentstatus(consent_id, cert):
+  req = getConsentStatus(consent_id=consent_id, certificate=cert)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="📉 Add exchange rate (FX)")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--from-currency', required=True, prompt=True)
+@click.option('--to-currency', required=True, prompt=True)
+@click.option('--conversion-value', required=True, prompt=True)
+@click.option('--inverse-conversion-value', required=True, prompt=True)
+@click.option('--effective-date', required=True, prompt=True, 
+              help="2017-09-19T00:00:00Z")
+def addfx(bank_id, from_currency, to_currency, conversion_value,
+          inverse_conversion_value, effective_date):
+  req = addFx(bank_id, from_currency, to_currency, conversion_value,
+              inverse_conversion_value, effective_date)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="🚜 📉 Load all foreign exchange rates (FX) to all banks")
+def importfx():
+  from time import sleep
+  print("This will take a while.")
+  print("First we're going to download all the latest exchange rates for you.")
+  print("Then we'll post them to your OBP instance") 
+  sleep(5)
+  importFx()
+
 @cli.command(help="⚠️  🏦 Delete all branches")
 @click.option('--bank-id', required=True)
 def deletebranches(bank_id):
   req = deleteBranches(bank_id)
+
+@cli.command(help="⚠️  💳 Delete card by id")
+@click.option('--bank-id', prompt=True, default="gh.29.uk.x")
+@click.option('--card-id', prompt=True)
+def deletecardbyid(bank_id, card_id):
+  req = deleteCardById(bank_id=bank_id, card_id=card_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
 
 @cli.command(help="🚜 Import branches from spreadsheet template")
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
@@ -211,3 +520,18 @@ def importusers(spreadsheet):
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
 def importtransactions(spreadsheet):
   req = importTransactions(spreadsheet)
+
+@cli.command(help="🚜 Import customers from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importcustomers(spreadsheet):
+  req = importCustomers(spreadsheet)
+
+@cli.command(help="🚜 Import card attributes from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importcardattribues(spreadsheet):
+  req = importCardAttributes(spreadsheet)
+
+@cli.command(help="🚜 Import cards from spreadsheet template")
+@click.argument('spreadsheet', type=click.File('rb'), required=True)
+def importcards(spreadsheet):
+  req = importCards(spreadsheet)

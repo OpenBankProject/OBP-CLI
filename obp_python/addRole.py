@@ -2,19 +2,26 @@ import requests
 import os
 from .init import get_config
 
-def addRole(role=None, require_bank_id=True):
+def addRole(role=None, bank_id=None, user_id=None):
+  """
+  Add a role/entitlement for the current user
+
+  For options see `obp addrole --help`
+  """
 
   OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
   OBP_API_HOST = get_config('OBP_API_HOST')
-  OBP_USER_ID = get_config('OBP_USER_ID')
-  if require_bank_id:
-    OBP_BANK_ID = get_config('OBP_BANK_ID')
-  else:
-    OBP_BANK_ID = ''
 
-  url = OBP_API_HOST + '/obp/v3.1.0/users/{}/'.format(OBP_USER_ID) + 'entitlements'
+  # If user_id not given, use currently logged in user  
+  if user_id is None:
+    user_id = get_config('OBP_USER_ID')
 
-  payload = {"bank_id":OBP_BANK_ID, "role_name": role}
+  if bank_id is None:
+    payload = {"bank_id":"", "role_name": role}
+  elif bank_id is not None:
+    payload = {"bank_id": bank_id, "role_name": role}
+  
+  url = OBP_API_HOST + '/obp/v3.1.0/users/{}/'.format(user_id) + 'entitlements'
 
   authorization = 'DirectLogin token="{}"'.format(OBP_AUTH_TOKEN)
   headers = {'Content-Type': 'application/json',
