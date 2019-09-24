@@ -3,10 +3,10 @@ from .init import get_config
 from .hasEntitlements import hasEntitlements
 
 
-def getCustomerKycDocuments(customer_id=None):
+def getCustomerKYCstatuses(customer_id=None):
 
     # Validate entitlements
-    requiredEntitlements = ['CanGetKycDocuments']
+    requiredEntitlements = ['CanGetKycStatuses']
     fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
 
     if fail is True:
