@@ -44,6 +44,8 @@ from .deleteBranches import deleteBranches
 from .deleteCardById import deleteCardById
 from .getUserIdByUsername import getUserIdByUsername
 from .getUsers import getUsers
+from .getKycChecks import getKycChecks
+from .getCustomerKycDocuments import getCustomerKycDocuments
 import pprint
 
 @click.group()
@@ -433,6 +435,26 @@ def getconsents(bank_id):
 def revokeconsent(bank_id, consent_id):
 
   req = revokeConsent(bank_id=bank_id, consent_id=consent_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Get KycChecks")
+@click.option('--customer-id', prompt=True, default="")
+def getkycchecks(customer_id):
+
+  req = getKycChecks(customer_id=customer_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Get Customer KycDocuments")
+@click.option('--customer-id', prompt=True, default="")
+def getcustomerkycdocuments(customer_id):
+
+  req = getCustomerKycDocuments(customer_id=customer_id)
   if req.status_code == 200:
     click.echo(req.text)
   else:
