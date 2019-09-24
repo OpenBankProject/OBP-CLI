@@ -471,6 +471,17 @@ def getcustomerkycstatuses(customer_id):
     else:
         exit(req.text)
 
+
+@cli.command(help="Get KYC Media for a customer")
+@click.option('--customer-id', prompt=True, default="")
+def getkycchecks(customer_id):
+
+  req = getKycChecks(customer_id=customer_id)
+  if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
 @cli.command(help="🚧 Answer consent")
 @click.option('--bank-id', prompt=True, default="gh.29.uk.x")
 @click.option('--consent-id', prompt=True)
