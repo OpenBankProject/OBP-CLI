@@ -1,6 +1,4 @@
 import requests
-import os
-import json
 from .init import get_config
 
 def linkUserToCustomer(bank_id=None, user_id=None, customer_id=None):
