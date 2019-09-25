@@ -15,4 +15,4 @@ def getCards(bank_id=None):
     exit(-1)
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/management/banks/{bank_id}/cards'.format(bank_id=bank_id)
   
-  makeGetRequest(url)
+  return makeGetRequest(url)

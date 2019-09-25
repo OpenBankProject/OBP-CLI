@@ -24,7 +24,7 @@ def getCardById(bank_id=None, card_id=None):
   # https://github.com/OpenBankProject/OBP-API/issues/1328
 
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/management/banks/{bank_id}/cards/{card_id}'.format(bank_id=bank_id, card_id=card_id)
-  makeGetRequest(url)
+  return makeGetRequest(url)
 
 
   

@@ -15,4 +15,4 @@ def getKycChecks(customer_id=None):
       exit(-1)
     url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{{customer_id}}/kyc_checks'.format(bank_id=customer_id)
 
-    makeGetRequest(url)
+    return makeGetRequest(url)

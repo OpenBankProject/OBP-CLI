@@ -9,4 +9,4 @@ def revokeConsent(bank_id=None, consent_id=None):
   """
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/banks/{bank_id}/my/consents/{consent_id}/revoke'.format(bank_id=bank_id, consent_id=consent_id)
   
-  makeGetRequest(url)
+  return makeGetRequest(url)

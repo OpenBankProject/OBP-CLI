@@ -14,4 +14,4 @@ def getUsers():
     exit(-1)
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/users'
   
-  makeGetRequest(url)
+  return makeGetRequest(url)

@@ -11,4 +11,4 @@ def getCustomerKYCMedia(customer_id=None):
 
     url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{{customer_id}}/kyc_media'.format(bank_id=customer_id)
 
-    makeGetRequest(url)
+    return makeGetRequest(url)

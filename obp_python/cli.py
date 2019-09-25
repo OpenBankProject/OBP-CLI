@@ -47,6 +47,7 @@ from .getUsers import getUsers
 from .getKycChecks import getKycChecks
 from .getCustomerKycDocuments import getCustomerKycDocuments
 from .getCustomerKycStatuses import getCustomerKYCstatuses
+from .addKycCheck import addKycCheck
 import pprint
 
 @click.group()
@@ -516,6 +517,45 @@ def addfx(bank_id, from_currency, to_currency, conversion_value,
           inverse_conversion_value, effective_date):
   req = addFx(bank_id, from_currency, to_currency, conversion_value,
               inverse_conversion_value, effective_date)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Add KYC Check")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--customer_id', required=True, prompt=True)
+@click.option('--customer-nr', required=True, prompt=True)
+@click.option('--kyc_check_id', required=True, prompt=True)
+@click.option('--date', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+@click.option('--how', required=True, prompt=True)
+@click.option('--staff-user-id', required=True, prompt=True)
+@click.option('--staff_name', required=True, prompt=True)
+@click.option('--satisfied', required=True, prompt=True)
+@click.option('--comments', required=True, prompt=True)
+def addkyccheck(
+        bank_id,
+        customer_id,
+        customer_nr,
+        kyc_check_id,
+        date,
+        how,
+        staff_user_id,
+        staff_name,
+        satisfied,
+        comments):
+  req = addKycCheck(
+        bank_id,
+        customer_id,
+        customer_nr,
+        kyc_check_id,
+        date,
+        how,
+        staff_user_id,
+        staff_name,
+        satisfied,
+        comments)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:

@@ -11,4 +11,4 @@ def getConsents(bank_id=None):
 
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/banks/{bank_id}/my/consents'.format(bank_id=bank_id)
   
-  makeGetRequest(url)
+  return makeGetRequest(url)

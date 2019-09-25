@@ -16,14 +16,14 @@ def check403status(req):
 
 def makeGetRequest(url):
     req = requests.get(url, headers=headers)
-    check403status(req)
+    return check403status(req)
 
 
 def makePutRequest(url,payload):
     req = requests.put(url, headers=headers, json=payload)
-    check403status(req)
+    return check403status(req)
 
 
 def makePostRequest(url,payload):
     req = requests.post(url, headers=headers, json=payload)
-    check403status(req)
+    return check403status(req)
