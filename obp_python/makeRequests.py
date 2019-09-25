@@ -23,3 +23,14 @@ def makePutRequest(url,payload):
         exit(-1)
 
     return req
+
+def makePostRequest(url,payload):
+    authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
+    headers = {'Content-Type': 'application/json',
+               'Authorization': authorization}
+    req = requests.post(url, headers=headers, json=payload)
+    if req.status_code == 403:
+        print(req.text)
+        exit(-1)
+
+    return req

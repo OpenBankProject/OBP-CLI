@@ -1,6 +1,7 @@
 import requests
 from .init import get_config
 from .hasEntitlements import hasEntitlements
+from .makeRequests import makeGetRequest
 
 
 def getKycChecks(customer_id=None):
@@ -14,13 +15,4 @@ def getKycChecks(customer_id=None):
       exit(-1)
     url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{{customer_id}}/kyc_checks'.format(bank_id=customer_id)
 
-    authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
-    headers = {'Content-Type': 'application/json',
-              'Authorization': authorization}
-    req = requests.get(url, headers=headers)
-
-    if req.status_code == 403:
-      print(req.text)
-      exit(-1)
-
-    return req
+    makeGetRequest(url)

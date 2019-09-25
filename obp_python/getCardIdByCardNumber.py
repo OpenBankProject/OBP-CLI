@@ -1,8 +1,6 @@
-import requests
-import os
-import json
+from .makeRequests import makeGetRequest
 from .init import get_config
-from .hasEntitlements import hasEntitlements
+from .hasEntitlements import checkForEntitlements
 
 def getCardIdByCardNumber(bank_id=None, card_number=None):
   """
@@ -11,21 +9,13 @@ def getCardIdByCardNumber(bank_id=None, card_number=None):
   Required roles: 
   e.g. obp addrole --role-name --bank-id gh.29.uk.x
   """
-
-  OBP_AUTH_TOKEN = get_config('OBP_AUTH_TOKEN')
-  OBP_API_HOST = get_config('OBP_API_HOST')
-
-
-  authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
-  headers = {'Content-Type': 'application/json',
-            'Authorization': authorization}
-
+  checkForEntitlements(['canGetCardsForBank'])
   # First get all cards at bank (Open Bank Project does not provoide a get
   # card id by card number api call yet
   # https://github.com/OpenBankProject/OBP-API/issues/1328
 
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/management/banks/{bank_id}/cards'.format(bank_id=bank_id)
-  req = requests.get(url, headers=headers)
+  req = makeGetRequest(url)
   if req.status_code != 200: 
     print("ERROR: Could not get all cards")
     print(req.text)

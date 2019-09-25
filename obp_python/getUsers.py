@@ -1,6 +1,7 @@
 import requests
 from .init import get_config
 from .hasEntitlements import hasEntitlements
+from .makeRequests import makeGetRequest
 
 def getUsers():
 
@@ -13,13 +14,4 @@ def getUsers():
     exit(-1)
   url = get_config('OBP_API_HOST') + '/obp/v3.1.0/users'
   
-  authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
-  headers = {'Content-Type': 'application/json',
-            'Authorization': authorization}
-  req = requests.get(url, headers=headers)
-  
-  if req.status_code == 403:
-    print(req.text)
-    exit(-1) 
-
-  return req
+  makeGetRequest(url)
