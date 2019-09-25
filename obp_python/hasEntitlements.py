@@ -38,3 +38,12 @@ def hasEntitlements(entitlements_required=[]):
     print("obp addrole --role-name {role} --bank-id your-bank-id".format(role=missing[0]))
 
   return fail, missing
+
+
+def checkForEntitlements(requiredEntitlements):
+  fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+
+  if fail is True:
+    print(msg)
+    exit(-1)
+
