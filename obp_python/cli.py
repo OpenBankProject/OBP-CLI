@@ -48,6 +48,7 @@ from .getKycChecks import getKycChecks
 from .getCustomerKycDocuments import getCustomerKycDocuments
 from .getCustomerKycStatuses import getCustomerKYCstatuses
 from .addKycCheck import addKycCheck
+from .getCustomerForCurrentUser import getCustomerForCurrentUser
 import pprint
 
 @click.group()
@@ -472,6 +473,14 @@ def getcustomerkycstatuses(customer_id):
     else:
         exit(req.text)
 
+@cli.command(help="Get Customers for Current User")
+def getcustomerforcurrentuser():
+
+    req = getCustomerForCurrentUser()
+    if req.status_code == 200:
+        click.echo(req.text)
+    else:
+        exit(req.text)
 
 @cli.command(help="Get KYC Media for a customer")
 @click.option('--customer-id', prompt=True, default="")
