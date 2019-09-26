@@ -1,26 +1,13 @@
-import requests
 from .init import get_config
-from .hasEntitlements import hasEntitlements
+from .hasEntitlements import checkForEntitlements
+from .makeRequests import makeGetRequest
 
 
 def getCustomerKYCstatuses(customer_id=None):
 
     # Validate entitlements
     requiredEntitlements = ['CanGetKycStatuses']
-    fail, msg = hasEntitlements(entitlements_required=requiredEntitlements)
+    checkForEntitlements(requiredEntitlements)
+    url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{customer_id}/kyc_statuses'.format(customer_id=customer_id)
 
-    if fail is True:
-      print(msg)
-      exit(-1)
-    url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{{customer_id}}/kyc_documents'.format(bank_id=customer_id)
-
-    authorization = 'DirectLogin token="{}"'.format(get_config('OBP_AUTH_TOKEN'))
-    headers = {'Content-Type': 'application/json',
-              'Authorization': authorization}
-    req = requests.get(url, headers=headers)
-
-    if req.status_code == 403:
-      print(req.text)
-      exit(-1)
-
-    return req
+    return makeGetRequest(url)

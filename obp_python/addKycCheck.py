@@ -6,10 +6,10 @@ from .hasEntitlements import checkForEntitlements
 from .makeRequests import makePutRequest
 
 def addKycCheck(
-        bankid=None,
-        customerid=None,
-        customernr=None,
-        kyccheckid=None,
+        bank_id=None,
+        customer_id=None,
+        customer_nr=None,
+        kyc_check_id=None,
         date=None,
         how=None,
         staff_user_id=None,
@@ -20,7 +20,7 @@ def addKycCheck(
   checkForEntitlements(['CanAddKycCheck'])
 
   payload = {
-      "customer_number" : customernr,
+      "customer_number" : customer_nr,
       "date" : date,
       "how" : how,
       "staff_user_id" : staff_user_id,
@@ -29,9 +29,9 @@ def addKycCheck(
       "comments" : comments}
 
   url = get_config('OBP_API_HOST') \
-        + '/obp/v4.0.0/banks/{{BANK_ID}}/customers/{{CUSTOMER_ID}}/kyc_check/{{KYC_CHECK_ID}}'.format(
-      BANK_ID=bankid,
-      CUSTOMER_ID=customerid,
-      KYC_CHECK_ID=kyccheckid)
+        + '/obp/v4.0.0/banks/{BANK_ID}/customers/{CUSTOMER_ID}/kyc_check/{KYC_CHECK_ID}'.format(
+      BANK_ID=bank_id,
+      CUSTOMER_ID=customer_id,
+      KYC_CHECK_ID=kyc_check_id)
 
   makePutRequest(url, payload)
