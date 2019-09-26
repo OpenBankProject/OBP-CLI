@@ -1,6 +1,5 @@
 click
 requests
-dms_convert
 #bs4
 #BeautifulSoup
 pyexcel_ods

@@ -49,6 +49,9 @@ from .getCustomerKycDocuments import getCustomerKycDocuments
 from .getCustomerKycStatuses import getCustomerKYCstatuses
 from .getCustomerKycMedia import getCustomerKYCMedia
 from .addKycCheck import addKycCheck
+from .addKycDocument import addKycDocument
+from .addKycMedia import addKycMedia
+from .addKycStatus import addKycStatus
 from .getSocialMediaHandles import getSocialMediaHandles
 from .addSocialMediaHandle import addSocialMediaHandle
 from .getCustomerForCurrentUser import getCustomerForCurrentUser
@@ -597,6 +600,103 @@ def addkyccheck(
         staff_name,
         satisfied,
         comments)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Add KYC Document")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--customer_id', required=True, prompt=True)
+@click.option('--customer-nr', required=True, prompt=True)
+@click.option('--kyc_document_id', required=True, prompt=True)
+@click.option('--type', required=True, prompt=True)
+@click.option('--number', required=True, prompt=True)
+@click.option('--issue-date', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+@click.option('--issue-place', required=True, prompt=True)
+@click.option('--expiry-date', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+def addkycdocument(
+        bank_id,
+        customer_id,
+        customer_nr,
+        kyc_document_id,
+        Type,
+        number,
+        issue_date,
+        issue_place,
+        expiry_date):
+  req = addKycDocument(
+        bank_id,
+        customer_id,
+        customer_nr,
+        kyc_document_id,
+        Type,
+        number,
+        issue_date,
+        issue_place,
+        expiry_date)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Add KYC Media")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--customer_id', required=True, prompt=True)
+@click.option('--kyc_media_id', required=True, prompt=True)
+@click.option('--customer-nr', required=True, prompt=True)
+@click.option('--type', required=True, prompt=True)
+@click.option('--url', required=True, prompt=True)
+@click.option('--date', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+@click.option('--kyc_document_id', required=True, prompt=True)
+@click.option('--kyc_check_id', required=True, prompt=True)
+def addkycmedia(
+        bank_id,
+        customer_id,
+        kyc_media_id,
+        customer_nr,
+        Type,
+        input_url,
+        date,
+        kyc_document_id,
+        kyc_check_id):
+  req = addKycMedia(
+        bank_id,
+        customer_id,
+        kyc_media_id,
+        customer_nr,
+        Type,
+        input_url,
+        date,
+        kyc_document_id,
+        kyc_check_id)
+  if req.status_code == 201 or req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Add KYC Status")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--customer_id', required=True, prompt=True)
+@click.option('--customer-nr', required=True, prompt=True)
+@click.option('--ok', required=True, prompt=True)
+@click.option('--date', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+def addkycstatus(
+        bank_id,
+        customer_id,
+        customer_nr,
+        ok,
+        date):
+  req = addKycStatus(
+        bank_id,
+        customer_id,
+        customer_nr,
+        ok,
+        date)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
