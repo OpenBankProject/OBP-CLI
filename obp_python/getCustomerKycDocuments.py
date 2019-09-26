@@ -13,6 +13,6 @@ def getCustomerKycDocuments(customer_id=None):
     if fail is True:
       print(msg)
       exit(-1)
-    url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{{customer_id}}/kyc_documents'.format(bank_id=customer_id)
+    url = get_config('OBP_API_HOST') + '/obp/v4.0.0/customers/{customer_id}/kyc_documents'.format(bank_id=customer_id)
 
     return makeGetRequest(url)

@@ -29,7 +29,7 @@ def addKycCheck(
       "comments" : comments}
 
   url = get_config('OBP_API_HOST') \
-        + '/obp/v4.0.0/banks/{{BANK_ID}}/customers/{{CUSTOMER_ID}}/kyc_check/{{KYC_CHECK_ID}}'.format(
+        + '/obp/v4.0.0/banks/{BANK_ID}/customers/{CUSTOMER_ID}/kyc_check/{KYC_CHECK_ID}'.format(
       BANK_ID=bank_id,
       CUSTOMER_ID=customer_id,
       KYC_CHECK_ID=kyc_check_id)
