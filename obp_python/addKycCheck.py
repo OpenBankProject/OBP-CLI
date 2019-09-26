@@ -34,4 +34,4 @@ def addKycCheck(
       CUSTOMER_ID=customer_id,
       KYC_CHECK_ID=kyc_check_id)
 
-  makePutRequest(url, payload)
+  return makePutRequest(url, payload)

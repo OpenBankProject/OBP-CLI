@@ -50,6 +50,7 @@ from .getCustomerKycStatuses import getCustomerKYCstatuses
 from .getCustomerKycMedia import getCustomerKYCMedia
 from .addKycCheck import addKycCheck
 from .getSocialMediaHandles import getSocialMediaHandles
+from .addSocialMediaHandle import addSocialMediaHandle
 from .getCustomerForCurrentUser import getCustomerForCurrentUser
 import pprint
 
@@ -501,6 +502,24 @@ def getsocialmedia(bank_id, customer_id):
 
   req = getSocialMediaHandles(bank_id=bank_id, customer_id=customer_id)
   if req.status_code == 200:
+    click.echo(req.text)
+  else:
+    exit(req.text)
+
+@cli.command(help="Add Social Media Handle")
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--customer-id', required=True, prompt=True)
+@click.option('--customer-nr', required=True, prompt=True)
+@click.option('--type', required=True, prompt=True)
+@click.option('--handle', required=True, prompt=True)
+@click.option('--date-added', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+@click.option('--date-activated', required=True, prompt=True,
+              help="2017-09-19T00:00:00Z")
+
+def addsocialmedia(bank_id, customer_id, customer_nr, type, handle, date_added, date_activated):
+  req = addSocialMediaHandle(bank_id, customer_id, customer_nr, type, handle, date_added, date_activated)
+  if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
     exit(req.text)
