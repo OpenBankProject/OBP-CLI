@@ -72,6 +72,7 @@ Commands:
   getuseridbyusername     📋 Get user id by username
   getusers                😃 Get all users
   importaccounts          🚜 Import accounts from spreadsheet template
+  importatms              🚜 Import atms from spreadsheet template
   importbranches          🚜 Import branches from spreadsheet template
   importcardattribues     🚜 Import card attributes from spreadsheet template
   importcards             🚜 Import cards from spreadsheet template
