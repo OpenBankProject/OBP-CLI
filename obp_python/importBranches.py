@@ -36,7 +36,7 @@ def importBranches(spreadsheet=None, sheet_name=None):
     m.update(get_value(0, branch).encode("utf-8")) #bank_id
     m.update(get_value(1, branch).encode("utf-8")) #name
     m.update(get_value(2, branch).encode("utf-8")) #Line_1
-    return  m.hexdigest()
+    return  m.hexdigest()[0:43]
 
   for index, branch in enumerate(sheetdata[1:][0][1:]): #skips sheetname, and header
     try:
@@ -55,7 +55,15 @@ def importBranches(spreadsheet=None, sheet_name=None):
       postcode = get_value(8, branch)
       county_code = get_value(9, branch)
       latitude = get_value(10, branch)
+      if latitude is not '':
+          latitude = float(latitude) 
+      else:
+          latitude = float('0')
       longitude = get_value(11, branch)
+      if longitude is not '':
+          longitude = float(longitude)
+      else:
+          longitude = float('0')
       branch_routing_scheme = get_value(12, branch)
       branch_routing_address = get_value(13, branch)
       is_accessible = get_value(14, branch)
@@ -63,7 +71,7 @@ def importBranches(spreadsheet=None, sheet_name=None):
       branch_type = get_value(16, branch)
       phone_number = get_value(17, branch)
       more_info = get_value(18, branch)
-      lobby_monday_opening_time = get_value(21, branch).strftime('%H:%M')
+      
 
       #Build branch object
       branch = {
@@ -81,8 +89,8 @@ def importBranches(spreadsheet=None, sheet_name=None):
             'country_code': county_code
         },
         'location' : {
-            'latitude': float(latitude),
-            'longitude': float(longitude)
+            'latitude': latitude,
+            'longitude': longitude
         },
         'meta': {
           'license': {
@@ -91,22 +99,22 @@ def importBranches(spreadsheet=None, sheet_name=None):
            }
         },
         'lobby': {
-          'monday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
-          'tuesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
-          'wednesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
-          'thursday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
-          'friday': [{'opening_time': '', 'closing_time': ''}],
-          'saturday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
-          'sunday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'monday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'tuesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'wednesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'thursday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'friday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'saturday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'sunday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
           },
           'drive_up': {
-            'monday': {'opening_time': '', 'closing_time': ''},
-            'tuesday': {'opening_time': '', 'closing_time': ''},
-            'wednesday': {'opening_time': '', 'closing_time': ''},
-            'thursday': {'opening_time': '', 'closing_time': ''},
-            'friday': {'opening_time': '', 'closing_time': ''},
-            'saturday': {'opening_time': '', 'closing_time': ''},
-            'sunday': {'opening_time': '', 'closing_time': ''},
+              'monday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'tuesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'wednesday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'thursday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'friday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'saturday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
+              'sunday': [{'opening_time': '09:00', 'closing_time': '16:00'}],
           },
           'branch_routing': {
                 'scheme': branch_routing_scheme,
