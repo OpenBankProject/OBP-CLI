@@ -28,6 +28,12 @@ Also, depending on your account access you may:
 pip install --user obp-python # Requires at least python 3
 ```
 
+```
+pip install obp-python # If you are using a python 3 virtual environment
+```
+
+
+
 > Warning: If your operating system defaults to python 2, your pip command might be:
 
 ```
