@@ -55,6 +55,7 @@ from .addKycStatus import addKycStatus
 from .getSocialMediaHandles import getSocialMediaHandles
 from .addSocialMediaHandle import addSocialMediaHandle
 from .getCustomerForCurrentUser import getCustomerForCurrentUser
+from .createProduct import createProduct
 import pprint
 
 @click.group()
@@ -715,6 +716,7 @@ def importfx():
 @click.option('--bank-id', required=True)
 def deletebranches(bank_id):
   req = deleteBranches(bank_id)
+  return req
 
 @cli.command(help="⚠️  💳 Delete card by id")
 @click.option('--bank-id', prompt=True, default="gh.29.uk.x")
@@ -760,3 +762,48 @@ def importcardattribues(spreadsheet):
 @click.argument('spreadsheet', type=click.File('rb'), required=True)
 def importcards(spreadsheet):
   req = importCards(spreadsheet)
+
+@cli.command(help="Create a Product")
+@click.option('--bank-id', default="test", prompt=True)
+@click.option('--product-code', prompt=True)
+@click.option('--name', prompt=True, help="Example: Auditor")
+@click.option('--parent-product-code', prompt=True, required=False)
+@click.option('--category', prompt=True)
+@click.option('--family', prompt=True, default="")
+@click.option('--superfamily', prompt=True)
+@click.option('--more-info-url', prompt=True)
+@click.option('--details', prompt=True)
+@click.option('--description', prompt=True)
+@click.option('--license_id', prompt=True)
+@click.option('--license_name', prompt=True)
+def createproduct(
+    bank_id,
+    product_code,
+    name,
+    parent_product_code,
+    category,
+    family,
+    superfamily,
+    more_info_url,
+    details,
+    description,
+    license_id,
+    license_name):
+      req = createProduct(
+            bank_id,
+            product_code,
+            name,
+            parent_product_code,
+            category,
+            family,
+            superfamily,
+            more_info_url,
+            details,
+            description,
+            license_id,
+            license_name
+            )
+      if req.status_code == 201 or req.status_code == 200:
+        click.echo(req.text)
+      else:
+        exit(req.text)
