@@ -74,8 +74,7 @@ def importAccounts(spreadsheet=None, sheet_name=None):
 
       #Post accounts to api
       response = createAccount(bankid=bank_id, userid=user_id, currency=balance_currency, label=label,
-                  type=account_type, branchid=branch_id,
-                  accountid=account_id)
+                               branchid=branch_id, accountid=account_id)
 
       print(response.text)
       #Create account returns 200 BUG: https://github.com/OpenBankProject/OBP-API/issues/1314

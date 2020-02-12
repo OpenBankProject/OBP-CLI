@@ -2,6 +2,7 @@ import requests
 import os
 import json
 from .init import get_config
+from .makeRequests import makePostRequest
 
 OBP_API_HOST = os.getenv('OBP_API_HOST')
 
@@ -18,7 +19,4 @@ def addUser(email=None, username=None, password=None, firstname=None,
   
   url = get_config('OBP_API_HOST') + "/obp/v3.1.0/users"
   
-  headers = {'Content-Type': 'application/json'}
-  req = requests.post(url, headers=headers, json=payload)
-
-  return req
+  return makePostRequest(url, payload)

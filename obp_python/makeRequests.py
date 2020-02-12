@@ -6,8 +6,8 @@ headers = {'Content-Type': 'application/json',
            'Authorization': authorization}
 
 
-def check403status(req):
-    if req.status_code == 403:
+def check4XXstatus(req):
+    if req.status_code >= 400:
         print(req.text)
         exit(-1)
 
@@ -16,14 +16,14 @@ def check403status(req):
 
 def makeGetRequest(url):
     req = requests.get(url, headers=headers)
-    return check403status(req)
+    return check4XXstatus(req)
 
 
 def makePutRequest(url,payload):
     req = requests.put(url, headers=headers, json=payload)
-    return check403status(req)
+    return check4XXstatus(req)
 
 
 def makePostRequest(url,payload):
     req = requests.post(url, headers=headers, json=payload)
-    return check403status(req)
+    return check4XXstatus(req)

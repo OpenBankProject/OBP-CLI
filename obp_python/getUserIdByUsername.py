@@ -16,4 +16,4 @@ def getUserIdByUsername(username=None):
   if req.status_code == 403:
     print(req.text)
     exit(-1)
-  return req
+  return req.text

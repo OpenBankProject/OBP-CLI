@@ -105,6 +105,16 @@ obp getauth # Displays your DirectLogin token
 ```
 
 
+### Create Bulk Users for load testing
+
+```
+obp bulkcreateusers --name-prefix=magniaffaffel --number-users=3 --number-transactions=3 --bank-id=rbs --seed-account-id=26fa77a2-028f-4022-b47d-26caa8db359b --seed-bank-id=rbs --seed-account-currency=GBP
+```
+
+Will create Users up to --number-users, username will be --name-prefix + usernumber (iterated per user starting from 1 
+till --number-users) with   5 Accounts with each having --number-transactions transactions.
+Needs a seed account to make the transactions from.
+
 #### Contributing
 
 > **Note** You can ignore this is your just using the utlity. This is 

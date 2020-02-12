@@ -56,6 +56,8 @@ from .getSocialMediaHandles import getSocialMediaHandles
 from .addSocialMediaHandle import addSocialMediaHandle
 from .getCustomerForCurrentUser import getCustomerForCurrentUser
 from .createProduct import createProduct
+from .bulkCreateUsers import bulkCreateUsers
+
 import pprint
 
 @click.group()
@@ -277,9 +279,8 @@ def adduser(username, email, password, firstname, lastname):
 @click.option('--bankid', prompt=True, help="Try getbanks")
 def addaccount(userid, accountid, label, type, currency, branchid, bankid):
 
-  req = createAccount(userid=userid, label=label, type=type,
-                      currency=currency, bankid=bankid, 
-                      branchid=branchid, accountid=accountid)
+  req = createAccount(bankid=bankid, userid=userid, currency=currency, label=label, branchid=branchid,
+                      accountid=accountid)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
@@ -702,6 +703,32 @@ def addkycstatus(
     click.echo(req.text)
   else:
     exit(req.text)
+
+@cli.command(help="Bulkcreate Users")
+@click.option('--name-prefix', required=True, prompt=True)
+@click.option('--number-users', required=True, prompt=True)
+@click.option('--number-transactions', required=True, prompt=True)
+@click.option('--bank-id', required=True, prompt=True)
+@click.option('--seed-account-id', required=True, prompt=True)
+@click.option('--seed-bank-id', required=True, prompt=True)
+@click.option('--seed-account-currency', required=True, prompt=True)
+def bulkcreateusers(
+        name_prefix,
+        number_users,
+        number_transactions,
+        bank_id,
+        seed_account_id,
+        seed_bank_id,
+        seed_account_currency):
+  req = bulkCreateUsers(
+        name_prefix,
+        number_users,
+        number_transactions,
+        bank_id,
+        seed_account_id,
+        seed_bank_id,
+        seed_account_currency)
+
 
 @cli.command(help="🚜 📉 Load all foreign exchange rates (FX) to all banks")
 def importfx():
