@@ -280,8 +280,9 @@ def adduser(username, email, password, firstname, lastname):
 @click.option('--bankid', prompt=True, help="Try getbanks")
 def addaccount(userid, accountid, label, type, currency, branchid, bankid):
 
-  req = createAccount(bankid=bankid, userid=userid, currency=currency, label=label, branchid=branchid,
-                      accountid=accountid)
+  req = createAccount(userid=userid, label=label, type=type,
+                      currency=currency, bankid=bankid, 
+                      branchid=branchid, accountid=accountid)
   if req.status_code == 201 or req.status_code == 200:
     click.echo(req.text)
   else:
@@ -744,7 +745,6 @@ def importfx():
 @click.option('--bank-id', required=True)
 def deletebranches(bank_id):
   req = deleteBranches(bank_id)
-  return req
 
 @cli.command(help="⚠️  💳 Delete card by id")
 @click.option('--bank-id', prompt=True, default="gh.29.uk.x")
