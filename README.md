@@ -28,6 +28,12 @@ Also, depending on your account access you may:
 pip install --user obp-python # Requires at least python 3
 ```
 
+```
+pip install obp-python # If you are using a python 3 virtual environment
+```
+
+
+
 > Warning: If your operating system defaults to python 2, your pip command might be:
 
 ```
@@ -72,6 +78,7 @@ Commands:
   getuseridbyusername     📋 Get user id by username
   getusers                😃 Get all users
   importaccounts          🚜 Import accounts from spreadsheet template
+  importatms              🚜 Import atms from spreadsheet template
   importbranches          🚜 Import branches from spreadsheet template
   importcardattribues     🚜 Import card attributes from spreadsheet template
   importcards             🚜 Import cards from spreadsheet template
