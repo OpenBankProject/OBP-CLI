@@ -16,7 +16,7 @@ def createAccount(bankid=None, userid=None, currency=None, label=None, productco
            "name": "OVERDRAFT_START_DATE", "type": "DATE_WITH_DAY", "value": "2012-04-23"}
       ]
   }
-  
-  url = get_config('OBP_API_HOST') + '/obp/v3.1.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}'.format(BANK_ID=bankid, ACCOUNT_ID=accountid)
+
+  url = get_config('OBP_API_HOST') + '/obp/v4.0.0/banks/{BANK_ID}/accounts/{ACCOUNT_ID}'.format(BANK_ID=bankid, ACCOUNT_ID=accountid)
   
   return makePutRequest(url,payload)

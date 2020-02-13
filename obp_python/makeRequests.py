@@ -10,7 +10,6 @@ def check4XXstatus(req):
     if req.status_code >= 400:
         print(req.text)
         exit(-1)
-
     return req
 
 

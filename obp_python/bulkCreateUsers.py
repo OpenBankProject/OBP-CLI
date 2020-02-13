@@ -4,18 +4,18 @@ from .createAccount import createAccount
 from .createHistoricalTransaction import createHistoricalTransaction
 
 import json
+import multiprocessing
 
 
 def bulkCreateUsers(namePrefix, numberOfUsers, numberOfTransactions, bankId, seedAccountId, seedBankId, seedAccountCurrency):
 
-    for i in range(1, int(numberOfUsers) + 1):
+    def chunkCreateUsers(i):
         username = namePrefix + str(i)
         password = "aVery4#long" + str(i)
         try:
             addUser((username + "@openbankproject.com"), username, password, "Uli", "Name-" + username)
         except:
             print("User {} not created!".format(username))
-            continue
         userId = json.loads(getUserIdByUsername(username)).get("user_id")
         print(userId)
         for y in range(1, 6):
@@ -24,6 +24,13 @@ def bulkCreateUsers(namePrefix, numberOfUsers, numberOfTransactions, bankId, see
             for x in range(1, int(numberOfTransactions) + 1):
                 createHistoricalTransaction(seedAccountId, seedBankId, accountId, bankId,
                                             seedAccountCurrency, '123',"bulkcreated", '2019-09-19T02:11:29Z', "2019-09-20T02:31:28Z")
+
+
+    for i in range(1, int(numberOfUsers) + 1):
+
+        p = multiprocessing.Process(target=chunkCreateUsers, args=(i,))
+        p.start()
+
 
 
 
